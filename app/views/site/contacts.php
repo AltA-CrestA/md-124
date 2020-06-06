@@ -71,6 +71,6 @@
 </main>
 <?php include ROOT . '/app/views/layouts/footer.php'; ?>
 <script src="/app/templates/plugins/jquery/jquery.min.js"></script>
-<script src="/app/templates/js/script.min.js"></script>
+<script src="/app/templates/js/script.js"></script>
 </body>
 </html>

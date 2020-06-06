@@ -1,6 +1,8 @@
 <?php
 
 
+use md124\models\Project;
+
 class SiteController
 {
 
@@ -32,13 +34,13 @@ class SiteController
             $errors[] = 'Укажите Имя <br/>';
         }
         if (trim($_POST['phone-contact']) == '') {
-            $errors[] = 'Укажите номер телефона <br/>';
+            $errors[] = 'Укажите номер телефона';
         }
         if (empty($errors)) {
             $result = "Имя пользователя: " .$_POST['name-contact'] . "<br/>";
             $result .= "Телефон пользователя: " .$_POST['phone-contact'] . "<br/>";
             $result .= "Сообщение пользователя: " .$_POST['message-contact'] . "<br/>";
-            send_mail($result);
+            Project::sendMail($result);
             $success = 'Спасибо, наш специалист свяжется с вами в ближайшее время!';
         } else {
             foreach($errors as $error) {
@@ -50,17 +52,6 @@ class SiteController
             'success' => $success,
             'failure' => $failure
         ));
-
-        function send_mail($result) {
-            $mail_to = "sale@irmedical.ru";
-            $subject = "Заполненая контактная форма на сайте";
-
-            $headers = "MIME-Version: 1.0\r\n";
-            $headers .= "Content-type: text/html; charset=utf-8\r\n";
-            $headers .= "From: Письмо с сайта <sale@irmedical.ru>\r\n";
-
-            mail($mail_to, $subject, $result, $headers);
-        }
 
         return true;
 

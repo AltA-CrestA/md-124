@@ -97,4 +97,18 @@ class Project
         return $projects;
     }
 
+    public static function sendMail($result)
+    {
+
+        $mail_to = "sale@irmedical.ru";
+        $subject = "Заполненая контактная форма на сайте";
+
+        $headers = "MIME-Version: 1.0\r\n";
+        $headers .= "Content-type: text/html; charset=utf-8\r\n";
+        $headers .= "From: Письмо с сайта <sale@irmedical.ru>\r\n";
+
+        mail($mail_to, $subject, $result, $headers);
+
+    }
+
 }

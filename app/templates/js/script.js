@@ -1,17 +1,17 @@
 // ФУНКЦИЯ ОПРЕДЕЛЕНИЯ ПОДДЕРЖКИ WEBP
 function testWebP(callback) {
-  var webP = new Image();
-  webP.onload = webP.onerror = function () {
-    callback(webP.height == 2);
-  };
-  webP.src =
-    'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+	var webP = new Image();
+	webP.onload = webP.onerror = function () {
+		callback(webP.height == 2);
+	};
+	webP.src =
+		'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
 }
 
 testWebP(function (support) {
-  if (support == true) {
-    document.querySelector('body').classList.add('webp');
-  }
+	if (support == true) {
+		document.querySelector('body').classList.add('webp');
+	}
 });
 ;
 $(document).ready(function () {
@@ -22,7 +22,7 @@ $(document).ready(function () {
 });
 ;
 let headerW =  $('.headerW'),
-scrollPrevW = 0;
+	scrollPrevW = 0;
 let header = $('header'),
 	scrollPrev = 0;
 
@@ -192,6 +192,7 @@ document.addEventListener('keydown', (e) => {
 			Element.prototype.msMatchesSelector;
 	}
 })();
+;
 
 $(document).ready(function olo (){
 	$('#submit-contact').click(function(){
@@ -216,7 +217,7 @@ $(document).ready(function olo (){
 					$('.result-contact').css({background: "#017605", color: "#fff", padding: "10px", fontSize: "18px", textAlign: "center"})
 					$('.result-contact').html(data.success); // выводим ответ сервера
 				} else {
-					$('.result-contact').css({background: "#F95D51", color: "#fff", padding: "10px", fontSize: "16px"})
+					$('.result-contact').css({border: "2px solid #000", color: "red", padding: "10px", fontSize: "16px"})
 					$('.result-contact').html(data.failure);
 				}
 			}
