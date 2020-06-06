@@ -1,0 +1,19 @@
+{
+    "name": "app/md124",
+    "authors": [
+        {
+            "name": "Alexey",
+            "email": "info@webskill24.ru"
+        }
+    ],
+    "require": {
+      "ext-pdo": "*",
+      "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "md124\\components\\": "app/components",
+            "md124\\models\\": "app/models"
+        }
+    }
+}
