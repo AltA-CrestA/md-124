@@ -76,6 +76,8 @@ class CatalogController
             'failure' => $failure
         ));
 
+        return true;
+
     }
 
 }
