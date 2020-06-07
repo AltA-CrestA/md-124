@@ -250,7 +250,7 @@ $(document).ready(function () {
 						padding: '10px ',
 						fontSize: '16px',
 						width: '300px',
-						margin: '-36px auto',
+						margin: '0px auto',
 						textAlign: 'center',
 					});
 					$('.result-contact').html(data.failure);
@@ -264,13 +264,14 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 	$('#submit-popup').click(function () {
+		console.log('hello world!!')
 		// собираем данные с формы
 		var name = $('#name-popup').val();
 		var phone = $('#phone-popup').val();
 		var message = $('#message-popup').val();
 		// отправляем данные
 		$.ajax({
-			url: '/action-popup.php', // куда отправляем
+			url: '/projects/1', // куда отправляем
 			type: 'post', // метод передачи
 			dataType: 'json', // тип передачи данных
 			data: {
@@ -298,6 +299,7 @@ $(document).ready(function () {
 						color: 'red',
 						padding: '10px',
 						fontSize: '16px',
+						margin: '20px 0px',
 					});
 					$('.result-popup').html(data.failure);
 				}

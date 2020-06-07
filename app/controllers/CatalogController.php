@@ -62,7 +62,7 @@ class CatalogController
         if (empty($errors)) {
             $result = "Имя пользователя: " .$_POST['name-popup'] . "<br/>";
             $result .= "Телефон пользователя: " .$_POST['phone-popup'] . "<br/>";
-            $result .= "Сообщение пользователя: " .$_POST['email-popup'] . "<br/>";
+            $result .= "Сообщение пользователя: " .$_POST['message-popup'] . "<br/>";
             Project::sendMail($result);
             $success = 'Спасибо, наш специалист свяжется с вами в ближайшее время!';
         } else {
