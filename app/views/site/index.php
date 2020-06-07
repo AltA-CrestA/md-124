@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a92d3a3d23.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/app/templates/css/style.min.css">
-    <title>MD124</title>
+    <title>Главная &mdash; Мастерская Дизайна</title>
 </head>
 <body>
 <?php include ROOT . '/app/views/layouts/header.php'; ?>
