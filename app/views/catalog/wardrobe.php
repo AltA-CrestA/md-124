@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/app/templates/css/style.min.css">
-    <title>Progect</title>
+    <script src="https://kit.fontawesome.com/a92d3a3d23.js" crossorigin="anonymous"></script>
+    <title>Шкафы &mdash; Мастерская Дизайна</title>
 </head>
 <body>
 <?php include ROOT . '/app/views/layouts/headerW.php'; ?>
@@ -18,40 +19,51 @@
                     </div>
                     <div class="room__text">
                         <h2>Шкафы</h2>
-                        <div class="popup__first-imgMIN">
-                            <img src="/app/templates/img/progectAll/4.png" alt="">
-                        </div>
                         <p>
-                            Гармоничное сочетание современных материалов, новомодной техники в стилизованном индустриальном интерьере - все это "Мастерская дизайа".
+                            Гармоничное сочетание современных материалов, новомодной техники в стилизованном индустриальном интерьере - все это "Мастерская дизайна".
                         </p>
                     </div>
                 </div>
                 <div class="room__content-item-down">
-                    <div class="room__box">
-                        <a href="#popup" class="popup-link">
-                            <img src="/app/templates/img/progectAll/1.png" alt="">
-                        </a>
-                    </div>
-                    <div class="room__box">
-                        <a href="#popup">
-                            <img src="/app/templates/img/progectAll/2.png" alt="">
-                        </a>
-                    </div>
-                    <div class="room__box">
-                        <a href="#popup">
-                            <img src="/app/templates/img/progectAll/3.png" alt="">
-                        </a>
-                    </div>
-                    <div class="room__box">
-                        <a href="#popup">
-                            <img src="/app/templates/img/progectAll/4.png" alt="">
-                        </a>
-                    </div>
-                    <div class="room__box">
-                        <a href="#popup">
-                            <img src="/app/templates/img/progectAll/5.png" alt="">
-                        </a>
-                    </div>
+
+                    <?php foreach ($categoryProjectsWardrobe as $wardrobe): ?>
+                        <div class="room__box">
+                            <div class="room__box-image">
+                                <img src="/app/templates/img/download/<?php echo $wardrobe['image']; ?>" alt="" class="minimized">
+                            </div>
+                            <div class="room__box-text">
+                                <h2><?php echo $wardrobe['name']; ?></h2>
+                                <ul>
+                                    <li><span>Корпус:</span> <?php echo $wardrobe['core']; ?></li>
+                                    <hr>
+                                    <?php if (!empty($wardrobe['facade'])): ?>
+                                        <li><span>Фасад:</span> <?php echo $wardrobe['facade']; ?></li>
+                                        <hr>
+                                    <?php endif; ?>
+                                    <?php if (!empty($wardrobe['furniture'])): ?>
+                                        <li><span>Фурнитура:</span> <?php echo $wardrobe['furniture']; ?></li>
+                                        <hr>
+                                    <?php endif; ?>
+                                    <?php if (!empty($wardrobe['system'])): ?>
+                                        <li><span>Алюминиевая система:</span> <?php echo $wardrobe['system']; ?></li>
+                                        <hr>
+                                    <?php endif; ?>
+                                    <?php if (!empty($wardrobe['door'])): ?>
+                                        <li><span>Наполнение дверей:</span> <?php echo $wardrobe['door']; ?></li>
+                                        <hr>
+                                    <?php endif; ?>
+                                    <?php if (!empty($bathroom['text'])): ?>
+                                        <li><span>А так же:</span> <?php echo $bathroom['text']; ?></li>
+                                        <hr>
+                                    <?php endif; ?>
+                                </ul>
+                                <div class="room__box-text-btn">
+                                    <a href="#popup" class="popup-link">Узнать стоимость</a>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+
                 </div>
             </div>
         </div>
