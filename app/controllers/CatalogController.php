@@ -47,4 +47,35 @@ class CatalogController
         return true;
     }
 
+    public function actionAjax()
+    {
+
+        $errors = array();
+        $success = array();
+        $failure = array();
+        if (trim($_POST['name-popup']) == '') {
+            $errors[] = 'Укажите Имя <br/>';
+        }
+        if (trim($_POST['phone-popup']) == '') {
+            $errors[] = 'Укажите номер телефона';
+        }
+        if (empty($errors)) {
+            $result = "Имя пользователя: " .$_POST['name-popup'] . "<br/>";
+            $result .= "Телефон пользователя: " .$_POST['phone-popup'] . "<br/>";
+            $result .= "Сообщение пользователя: " .$_POST['email-popup'] . "<br/>";
+            Project::sendMail($result);
+            $success = 'Спасибо, наш специалист свяжется с вами в ближайшее время!';
+        } else {
+            foreach($errors as $error) {
+                $failure[] .= "$error<br/>";
+            }
+        }
+
+        echo json_encode(array(
+            'success' => $success,
+            'failure' => $failure
+        ));
+
+    }
+
 }

@@ -194,7 +194,7 @@ document.addEventListener('keydown', (e) => {
 })();
 ;
 
-$(document).ready(function olo (){
+$(document).ready(function(){
 	$('#submit-contact').click(function(){
 		// собираем данные с формы
 		var name    = $('#name-contact').val();
@@ -219,6 +219,40 @@ $(document).ready(function olo (){
 				} else {
 					$('.result-contact').css({border: "2px solid #000", color: "red", padding: "10px", fontSize: "16px"})
 					$('.result-contact').html(data.failure);
+				}
+			}
+		});
+	});
+});
+
+// ----  POPUP --------
+
+$(document).ready(function(){
+	$('#submit-popup').click(function(){
+		// собираем данные с формы
+		var name    = $('#name-popup').val();
+		var phone   = $('#phone-popup').val();
+		var message   = $('#message-popup').val();
+		// отправляем данные
+		$.ajax({
+			url: "/action-popup.php", // куда отправляем
+			type: "post", // метод передачи
+			dataType: "json", // тип передачи данных
+			data: { // что отправляем
+				"name-popup":   name,
+				"phone-popup":  phone,
+				"message-popup":  message
+			},
+			// после получения ответа сервера
+			success: function(data){
+				if (jQuery.isEmptyObject(data['failure'])) {
+					$('.popup__item').css({display: "none"});
+					$('.result-popup').css({background: "#017605", color: "#fff", padding: "10px", fontSize: "18px", textAlign: "center"})
+					$('.result-popup').html(data.success); // выводим ответ сервера
+					$('.popup').delay(2250).fadeOut("slow");
+				} else {
+					$('.result-popup').css({border: "2px solid #000", color: "red", padding: "10px", fontSize: "16px"})
+					$('.result-popup').html(data.failure);
 				}
 			}
 		});
