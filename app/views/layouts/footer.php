@@ -13,10 +13,10 @@
 			</div>
 			<hr>
 			<div class="footer__content__info">
-				<div class="footer__content__info-item">Instagram</div>
-				<div class="footer__content__info-item">VK</div>
-				<div class="footer__content__info-item">Facebook</div>
-				<div class="footer__content__info-item">Twitter</div>
+				<a href="#" class="footer__content__info-item"><i class="fab fa-instagram"></i></a>
+				<a href="#" class="footer__content__info-item"><i class="fab fa-vk"></i></a>
+				<a href="#" class="footer__content__info-item"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="footer__content__info-item"><i class="fab fa-twitter"></i></a>
 			</div>
 			<hr>
 			<div class="footer__content__safe">

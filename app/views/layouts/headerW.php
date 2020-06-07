@@ -14,7 +14,7 @@
 						<a href="/projects">Наши проекты</a>
 					</li>
 					<li class='underline'>
-						<a href="/projects">Контакты</a>
+						<a href="/contacts">Контакты</a>
 					</li>
 				</ul>
 			</div>

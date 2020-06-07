@@ -1,17 +1,17 @@
 // ФУНКЦИЯ ОПРЕДЕЛЕНИЯ ПОДДЕРЖКИ WEBP
 function testWebP(callback) {
-	var webP = new Image();
-	webP.onload = webP.onerror = function () {
-		callback(webP.height == 2);
-	};
-	webP.src =
-		'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+  var webP = new Image();
+  webP.onload = webP.onerror = function () {
+    callback(webP.height == 2);
+  };
+  webP.src =
+    'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
 }
 
 testWebP(function (support) {
-	if (support == true) {
-		document.querySelector('body').classList.add('webp');
-	}
+  if (support == true) {
+    document.querySelector('body').classList.add('webp');
+  }
 });
 ;
 $(document).ready(function () {
@@ -22,7 +22,7 @@ $(document).ready(function () {
 });
 ;
 let headerW =  $('.headerW'),
-	scrollPrevW = 0;
+scrollPrevW = 0;
 let header = $('header'),
 	scrollPrev = 0;
 
@@ -80,8 +80,8 @@ if (popupLinks.length > 0) {
 	for (let i = 0; i < popupLinks.length; i++) {
 		const popupLink = popupLinks[i];
 		popupLink.addEventListener('click', (e) => {
-			// const popupName = popupLink.getAttribute('href').replace('#', '');
-			const curentPopup = document.getElementByClass('.ppp');
+			const popupName = popupLink.getAttribute('href').replace('#', '');
+			const curentPopup = document.getElementById(popupName);
 			popupOpen(curentPopup);
 			e.preventDefault();
 		});
@@ -193,6 +193,31 @@ document.addEventListener('keydown', (e) => {
 	}
 })();
 ;
+$(function () {
+	$('.minimized').click(function (event) {
+		var i_path = $(this).attr('src');
+		$('body').append(
+			'<div id="overlay"></div><div id="magnify"><img src="' +
+				i_path +
+				'"><div id="close-popup"><i></i></div></div>'
+		);
+		$('#magnify').css({
+			left: ($(document).width() - $('#magnify').outerWidth()) / 2,
+			top: ($(window).height() - $('#magnify').outerHeight()) / 2,
+		});
+		$('#overlay, #magnify').fadeIn('fast');
+	});
+
+	$('body').on('click', '#close-popup, #overlay', function (event) {
+		event.preventDefault();
+
+		$('#overlay, #magnify').fadeOut('fast', function () {
+			$('#close-popup, #magnify, #overlay').remove();
+		});
+	});
+});
+;
+
 
 $(document).ready(function(){
 	$('#submit-contact').click(function(){
