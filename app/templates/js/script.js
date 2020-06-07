@@ -1,28 +1,26 @@
 // ФУНКЦИЯ ОПРЕДЕЛЕНИЯ ПОДДЕРЖКИ WEBP
 function testWebP(callback) {
-  var webP = new Image();
-  webP.onload = webP.onerror = function () {
-    callback(webP.height == 2);
-  };
-  webP.src =
-    'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+	var webP = new Image();
+	webP.onload = webP.onerror = function () {
+		callback(webP.height == 2);
+	};
+	webP.src =
+		'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
 }
 
 testWebP(function (support) {
-  if (support == true) {
-    document.querySelector('body').classList.add('webp');
-  }
+	if (support == true) {
+		document.querySelector('body').classList.add('webp');
+	}
 });
-;
 $(document).ready(function () {
 	$('.header__burger').click(function (event) {
 		$('.header__burger,.header__content__menu, .headerW__content__menuW').toggleClass('active');
 		$('body').toggleClass('lock');
 	});
 });
-;
-let headerW =  $('.headerW'),
-scrollPrevW = 0;
+let headerW = $('.headerW'),
+	scrollPrevW = 0;
 let header = $('header'),
 	scrollPrev = 0;
 
@@ -68,7 +66,7 @@ $(window).scroll(function () {
 	}
 	scrollPrevW = scrolled;
 	scrollPrev = scrolled;
-});;
+});
 const popupLinks = document.querySelectorAll('.popup-link');
 const lockPadding = document.querySelectorAll('.lock-padding');
 
@@ -192,7 +190,6 @@ document.addEventListener('keydown', (e) => {
 			Element.prototype.msMatchesSelector;
 	}
 })();
-;
 $(function () {
 	$('.minimized').click(function (event) {
 		var i_path = $(this).attr('src');
@@ -216,70 +213,95 @@ $(function () {
 		});
 	});
 });
-;
-
-
-$(document).ready(function(){
-	$('#submit-contact').click(function(){
+$(document).ready(function () {
+	$('#submit-contact').click(function () {
 		// собираем данные с формы
-		var name    = $('#name-contact').val();
-		var phone   = $('#phone-contact').val();
-		var message   = $('#message-contact').val();
+		var name = $('#name-contact').val();
+		var phone = $('#phone-contact').val();
+		var message = $('#message-contact').val();
 		// отправляем данные
 		$.ajax({
-			url: "/contacts/ajax", // куда отправляем
-			type: "post", // метод передачи
-			dataType: "json", // тип передачи данных
-			data: { // что отправляем
-				"name-contact":   name,
-				"phone-contact":  phone,
-				"message-contact":  message
+			url: '/contacts/ajax', // куда отправляем
+			type: 'post', // метод передачи
+			dataType: 'json', // тип передачи данных
+			data: {
+				// что отправляем
+				'name-contact': name,
+				'phone-contact': phone,
+				'message-contact': message,
 			},
 			// после получения ответа сервера
-			success: function(data){
+			success: function (data) {
 				if (jQuery.isEmptyObject(data['failure'])) {
-					$('.formSection__content').css({display: "none"});
-					$('.result-contact').css({background: "#017605", color: "#fff", padding: "10px", fontSize: "18px", textAlign: "center"})
+					$('.formSection__content').css({ display: 'none' });
+					$('.result-contact').css({
+						background: '#004902',
+						color: '#fff',
+						padding: '10px 0',
+						margin: '0',
+						fontSize: '18px',
+						textAlign: 'center',
+					});
 					$('.result-contact').html(data.success); // выводим ответ сервера
 				} else {
-					$('.result-contact').css({border: "2px solid #000", color: "red", padding: "10px", fontSize: "16px"})
+					$('.result-contact').css({
+						border: '2px solid #000',
+						color: 'red',
+						padding: '10px ',
+						fontSize: '16px',
+						width: '300px',
+						margin: '-36px auto',
+						textAlign: 'center',
+					});
 					$('.result-contact').html(data.failure);
 				}
-			}
+			},
 		});
 	});
 });
 
 // ----  POPUP --------
 
-$(document).ready(function(){
-	$('#submit-popup').click(function(){
+$(document).ready(function () {
+	$('#submit-popup').click(function () {
 		// собираем данные с формы
-		var name    = $('#name-popup').val();
-		var phone   = $('#phone-popup').val();
-		var message   = $('#message-popup').val();
+		var name = $('#name-popup').val();
+		var phone = $('#phone-popup').val();
+		var message = $('#message-popup').val();
 		// отправляем данные
 		$.ajax({
-			url: "/action-popup.php", // куда отправляем
-			type: "post", // метод передачи
-			dataType: "json", // тип передачи данных
-			data: { // что отправляем
-				"name-popup":   name,
-				"phone-popup":  phone,
-				"message-popup":  message
+			url: '/action-popup.php', // куда отправляем
+			type: 'post', // метод передачи
+			dataType: 'json', // тип передачи данных
+			data: {
+				// что отправляем
+				'name-popup': name,
+				'phone-popup': phone,
+				'message-popup': message,
 			},
 			// после получения ответа сервера
-			success: function(data){
+			success: function (data) {
 				if (jQuery.isEmptyObject(data['failure'])) {
-					$('.popup__item').css({display: "none"});
-					$('.result-popup').css({background: "#017605", color: "#fff", padding: "10px", fontSize: "18px", textAlign: "center"})
+					$('.popup__item').css({ display: 'none' });
+					$('.result-popup').css({
+						background: '#017605',
+						color: '#fff',
+						padding: '10px',
+						fontSize: '18px',
+						textAlign: 'center',
+					});
 					$('.result-popup').html(data.success); // выводим ответ сервера
-					$('.popup').delay(2250).fadeOut("slow");
+					$('.popup').delay(2250).fadeOut('slow');
 				} else {
-					$('.result-popup').css({border: "2px solid #000", color: "red", padding: "10px", fontSize: "16px"})
+					$('.result-popup').css({
+						border: '2px solid #000',
+						color: 'red',
+						padding: '10px',
+						fontSize: '16px',
+					});
 					$('.result-popup').html(data.failure);
 				}
-			}
+			},
 		});
 	});
 });

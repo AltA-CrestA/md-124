@@ -611,13 +611,17 @@ header .header__content__menu ul li:last-child {
           filter: brightness(70%);
 }
 
+.room__content-item-down .room__box-image img {
+  background-size: contain;
+}
+
 .room__content-item-down .room__box-text {
   color: black;
 }
 
 .room__content-item-down .room__box-text h2 {
   padding-top: 1vh;
-  font-size: calc(18px + 6 * ((100vw - 320px) / 1600));
+  font-size: calc(16px + 6 * ((100vw - 320px) / 1600));
 }
 
 .room__content-item-down .room__box-text ul {
@@ -625,6 +629,12 @@ header .header__content__menu ul li:last-child {
 }
 
 .room__content-item-down .room__box-text ul li {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  word-wrap: break-word;
+  min-height: 35px;
+  text-align: end;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -633,10 +643,12 @@ header .header__content__menu ul li:last-child {
           justify-content: space-between;
   padding: 0.5vh 0;
   color: #d38b24;
-  font-size: calc(14px + 4 * ((100vw - 320px) / 1600));
+  font-size: calc(12px + 1 * ((100vw - 320px) / 1600));
 }
 
 .room__content-item-down .room__box-text ul li span {
+  margin-right: 5px;
+  text-align: start;
   color: black;
 }
 
@@ -1562,8 +1574,8 @@ body a {
 
 @media (max-width: 500px) {
   .room__content-item-down .room__box .room__box-image {
-    height: 85vw;
-    width: 85vw;
+    height: 89vw;
+    width: 89vw;
   }
 
   .room__content-item-down {

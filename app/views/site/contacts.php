@@ -42,10 +42,10 @@
             </div>
         </div>
     </section>
+    <div class="result-contact"></div>
     <section class='formSection'>
         <div class="formSection__content">
             <div class="formSection__content__form">
-                <div class="result-contact"></div>
             </div>
             <div class="formSection__content__form">
                 <label for="name-contact">Ваше имя</label>
