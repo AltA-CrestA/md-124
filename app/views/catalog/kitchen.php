@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/app/templates/css/style.min.css">
     <script src="https://kit.fontawesome.com/a92d3a3d23.js" crossorigin="anonymous"></script>
-    <title>Кухни &mdash; Мастерская Дизайна</title>
+    <title><?php echo $categoriesId['name']; ?> &mdash; Мастерская Дизайна</title>
 </head>
 <body>
 <?php include ROOT .  '/app/views/layouts/headerW.php'; ?>
@@ -18,7 +18,7 @@
                         <img src="/app/templates/img/1.png" alt="">
                     </div>
                     <div class="room__text">
-                        <h2>Кухни</h2>
+                        <h2><?php echo $categoriesId['name']; ?></h2>
                         <p>
                             Гармоничное сочетание современных материалов, новомодной техники в стилизованном индустриальном интерьере - все это "Мастерская дизайна".
                         </p>
@@ -73,27 +73,12 @@
         </div>
     </section>
 </main>
- Форма
-<div id="popup" class="popup">
-    <div class="popup__body ">
-        <div class="popup__content">
-            <div class="else">
-                <a href="#" class="popup__clouse close-popup">&#10006;</a>
-                <h2>Заполните форму обратной связи, и мы свяжемся с вами, чтобы воплотить ваши самые смелые идеи!</h2>
-                <div class="result-popup"></div>
-                <div class="popup__item">
-                    <input type="text" placeholder="Ваше имя" name="name-popup" id="name-popup">
-                    <input type="tel" placeholder="Ваш телефон" name="phone-popup" id="phone-popup">
-                    <textarea name="message-popup" id="message-popup" cols="30" rows="10" placeholder='Сообщение'></textarea>
-                    <div class="popup__item-formBtn">
-                        <button type="submit" name="submit-popup" id="submit-popup">Отправить</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<!-- Форма-->
+<?php include ROOT . '/app/views/layouts/popup.php'?>
+<!-- Конец Формы-->
+<!-- Футер-->
 <?php include ROOT . '/app/views/layouts/footer.php'; ?>
+<!-- Конец Футера-->
 <script src="/app/templates/plugins/jquery/jquery.min.js"></script>
 <script src="/app/templates/js/script.js"></script>
 </body>

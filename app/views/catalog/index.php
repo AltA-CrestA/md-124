@@ -40,7 +40,7 @@
     </section>
     <section class="firsprogect">
         <div class="firsprogect__content">
-            <h2>Выбирете категорию</h2>
+            <h2>Выберете категорию</h2>
             <div class="firsprogect__content-item">
 
                 <?php foreach ($categoryList as $category): ?>

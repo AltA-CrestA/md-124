@@ -21,21 +21,21 @@
                 <div class="contact__content-item-box">
                     <i class="fas fa-map-signs iconCont"></i>
                     <div class="item__title">
-                        <h3>Красноясрск</h3>
-                        <h4>ул. Мира, д.102, корп. 3</h4>
+                        <h3>Красноярск</h3>
+                        <h4>ул. Шахтёров, 65, ТЦ Континент</h4>
                     </div>
                 </div>
                 <div class="contact__content-item-box">
                     <i class="fas fa-mobile-alt iconCont"></i>
                     <div class="item__title">
-                        <a href="tel:+73912093953">8 (391) 209 39 53</a>
+                        <a href="tel:+79832693953">+7(983)269-39-53</a>
                         <h4>пн-пт 10:00-20:00</h4>
                     </div>
                 </div>
                 <div class="contact__content-item-box">
                     <i class="far fa-envelope iconCont"></i>
                     <div class="item__title">
-                        <a href="mailto:info@mebel-lab.ru"> info@mebel-lab.ru</a>
+                        <a href="mailto:md_124@mail.ru"> md_124@mail.ru</a>
                         <h4>Присылайте свой запрос<br> в любое время!</h4>
                     </div>
                 </div>

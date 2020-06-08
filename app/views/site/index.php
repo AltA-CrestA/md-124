@@ -27,7 +27,7 @@
             <div class="aboutUsSection__content__text">
                 <p>
                     Наша компания занимается производством мебели более 5 лет - мы изготавливаем кухни,
-                    мебельные гарнитуры для спален, гостинных и любых другим помещений.
+                    мебельные гарнитуры для спален, гостиных и любых другим помещений.
                 </p>
                 <br>
                 <ul>
@@ -37,8 +37,8 @@
                         варианты из ЛДСП и МДФ, натуральный камень
                     </li>
                     <li>Красивое оформление - обшивка шпоном, покрытие эмалью</li>
-                    <li>Изготовление на заказ, реализация авторских проектов и вариантов дизайно</li>
-                    <li>Оптимальные расценки благодаря собсвенному производству</li>
+                    <li>Изготовление на заказ, реализация авторских проектов и вариантов дизайнов</li>
+                    <li>Оптимальные расценки благодаря собственному производству</li>
                 </ul>
             </div>
         </div>
@@ -50,13 +50,13 @@
             <h2>Наши проекты</h2>
             <div class="progectUsSection__content-item totalItem">
                 <div class="item">
-                    <picture><source srcset="/app/templates/img/us_progect/1.webp" type="image/webp"><img src="/app/templates/img/us_progect/1.png" alt=""></picture>
+                    <picture><source srcset="/app/templates/img/progectAll/1.webp" type="image/webp"><img src="/app/templates/img/progectAll/1.png" alt=""></picture>
                 </div>
                 <div class="item">
-                    <picture><source srcset="/app/templates/img/us_progect/2.webp" type="image/webp"><img src="/app/templates/img/us_progect/2.png" alt=""></picture>
+                    <picture><source srcset="/app/templates/img/progectAll/2.webp" type="image/webp"><img src="/app/templates/img/progectAll/2.png" alt=""></picture>
                 </div>
                 <div class="three item">
-                    <picture><source srcset="/app/templates/img/us_progect/3.webp" type="image/webp"><img src="/app/templates/img/us_progect/3.png" alt=""></picture>
+                    <picture><source srcset="/app/templates/img/progectAll/4.webp" type="image/webp"><img src="/app/templates/img/progectAll/4.png" alt=""></picture>
                 </div>
             </div>
             <div class="progectUsSection__content-button">
