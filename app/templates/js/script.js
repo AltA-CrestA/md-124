@@ -264,7 +264,6 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 	$('#submit-popup').click(function () {
-		console.log('hello world!!')
 		// собираем данные с формы
 		var name = $('#name-popup').val();
 		var phone = $('#phone-popup').val();
@@ -306,4 +305,52 @@ $(document).ready(function () {
 			},
 		});
 	});
+});
+
+// ----  FORM --------
+
+$(document).ready(function () {
+    $('#submit-form').click(function () {
+        console.log('hello world!!')
+        // собираем данные с формы
+        var name = $('#name-form').val();
+        var phone = $('#phone-form').val();
+        var message = $('#message-form').val();
+        // отправляем данные
+        $.ajax({
+            url: '/form/ajax', // куда отправляем
+            type: 'post', // метод передачи
+            dataType: 'json', // тип передачи данных
+            data: {
+                // что отправляем
+                'name-form': name,
+                'phone-form': phone,
+                'message-form': message,
+            },
+            // после получения ответа сервера
+            success: function (data) {
+                if (jQuery.isEmptyObject(data['failure'])) {
+                    $('.formSection__content').css({ display: 'none' });
+                    $('.result-form').css({
+                        background: '#017605',
+                        color: '#fff',
+                        padding: '10px',
+                        fontSize: '18px',
+                        textAlign: 'center',
+                    });
+                    $('.result-form').html(data.success); // выводим ответ сервера
+                    $('.result-form').delay(2250).fadeOut('slow');
+                } else {
+                    $('.result-form').css({
+                        border: '2px solid #000',
+                        color: 'red',
+                        padding: '10px',
+                        fontSize: '16px',
+                        margin: '20px 0px',
+                    });
+                    $('.result-form').html(data.failure);
+                }
+            },
+        });
+    });
 });

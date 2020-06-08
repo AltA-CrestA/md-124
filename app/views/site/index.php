@@ -87,22 +87,23 @@
     </section>
 
     <!-- Обратная форма связи -->
+    <div class="result-form"></div>
     <section class='formSection'>
         <div class="formSection__content">
             <div class="formSection__content__form">
-                <label for="name">Ваше имя</label>
-                <input type="name">
+                <label for="name-form">Ваше имя</label>
+                <input type="text" name="name-form" id="name-form">
             </div>
             <div class="formSection__content__form">
-                <label for="phone">Ваш тел<span>.</span><span class='phoneReturn'>ефон</span></label>
-                <input type="phone">
+                <label for="phone-form">Ваш тел<span>.</span><span class='phoneReturn'>ефон</span></label>
+                <input type="tel" name="phone-form" id="phone-form">
             </div>
             <div class="formSection__content__form">
-                <label for="message">Сообщение</label>
-                <textarea name="message" id="" cols="30" rows="10"></textarea>
+                <label for="message-form">Сообщение</label>
+                <textarea name="message-form" id="message-form" cols="30" rows="10"></textarea>
             </div>
             <div class="formSection__content__formBtn">
-                <button>Отправить</button>
+                <button type="submit" name="submit-form" id="submit-form">Отправить</button>
             </div>
         </div>
     </section>
@@ -111,6 +112,6 @@
 <?php include ROOT . '/app/views/layouts/footer.php'; ?>
 <script src="/app/templates/plugins/jquery/jquery.min.js"></script>
 <script src="/app/templates/plugins/paralax/parallax.min.js"></script>
-<script src="/app/templates/js/script.min.js"></script>
+<script src="/app/templates/js/script.js"></script>
 </body>
 </html>

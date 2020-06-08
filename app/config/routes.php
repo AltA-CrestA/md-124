@@ -6,5 +6,6 @@ return array(
 
     'contacts/ajax' => 'site/ajax', // actionAjax в SiteController
     'contacts' => 'site/contact', // actionContact в SiteController
+    'form/ajax' => 'site/form', // actionForm в SiteController
     '^/*$' => 'site/index', // actionIndex в SiteController
 );
