@@ -35,30 +35,22 @@
                                 <h2><?php echo $kitchen['name']; ?></h2>
                                 <ul>
                                     <li><span>Корпус:</span> <?php echo $kitchen['core']; ?></li>
-                                    <hr>
                                     <li><span>Фасад:</span> <?php echo $kitchen['facade']; ?></li>
-                                    <hr>
                                     <li><span>Фурнитура:</span> <?php echo $kitchen['furniture']; ?></li>
-                                    <hr>
                                     <?php if (!empty($kitchen['tabletop'])): ?>
                                         <li><span>Столешница:</span> <?php echo $kitchen['tabletop']; ?></li>
-                                        <hr>
                                     <?php endif; ?>
                                     <?php if (!empty($kitchen['handles'])): ?>
                                         <li><span>Ручки:</span> <?php echo $kitchen['handles']; ?></li>
-                                        <hr>
                                     <?php endif; ?>
                                     <?php if (!empty($kitchen['washing'])): ?>
                                         <li><span>Мойка:</span> <?php echo $kitchen['washing']; ?></li>
-                                        <hr>
                                     <?php endif; ?>
                                     <?php if (!empty($kitchen['backlight'])): ?>
                                         <li><span>Подсветка:</span> <?php echo $kitchen['backlight']; ?></li>
-                                        <hr>
                                     <?php endif; ?>
                                     <?php if (!empty($kitchen['text'])): ?>
                                         <li><span>А так же:</span> <?php echo $kitchen['text']; ?></li>
-                                        <hr>
                                     <?php endif; ?>
                                 </ul>
                                 <div class="room__box-text-btn">

@@ -35,26 +35,20 @@
                                 <h2><?php echo $wardrobe['name']; ?></h2>
                                 <ul>
                                     <li><span>Корпус:</span> <?php echo $wardrobe['core']; ?></li>
-                                    <hr>
                                     <?php if (!empty($wardrobe['facade'])): ?>
                                         <li><span>Фасад:</span> <?php echo $wardrobe['facade']; ?></li>
-                                        <hr>
                                     <?php endif; ?>
                                     <?php if (!empty($wardrobe['furniture'])): ?>
                                         <li><span>Фурнитура:</span> <?php echo $wardrobe['furniture']; ?></li>
-                                        <hr>
                                     <?php endif; ?>
                                     <?php if (!empty($wardrobe['system'])): ?>
                                         <li><span>Алюминиевая система:</span> <?php echo $wardrobe['system']; ?></li>
-                                        <hr>
                                     <?php endif; ?>
                                     <?php if (!empty($wardrobe['door'])): ?>
                                         <li><span>Наполнение дверей:</span> <?php echo $wardrobe['door']; ?></li>
-                                        <hr>
                                     <?php endif; ?>
                                     <?php if (!empty($bathroom['text'])): ?>
                                         <li><span>А так же:</span> <?php echo $bathroom['text']; ?></li>
-                                        <hr>
                                     <?php endif; ?>
                                 </ul>
                                 <div class="room__box-text-btn">

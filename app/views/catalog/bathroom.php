@@ -35,20 +35,15 @@
                                 <h2><?php echo $bathroom['name']; ?></h2>
                                 <ul>
                                     <li><span>Корпус:</span> <?php echo $bathroom['core']; ?></li>
-                                    <hr>
                                     <?php if (!empty($bathroom['facade'])): ?>
                                         <li><span>Фасад:</span> <?php echo $bathroom['facade']; ?></li>
-                                        <hr>
                                     <?php endif; ?>
                                     <li><span>Фурнитура:</span> <?php echo $bathroom['furniture']; ?></li>
-                                    <hr>
                                     <?php if (!empty($bathroom['tabletop'])): ?>
                                         <li><span>Столешница:</span> <?php echo $bathroom['tabletop']; ?></li>
-                                        <hr>
                                     <?php endif; ?>
                                     <?php if (!empty($bathroom['text'])): ?>
                                         <li><span>А так же:</span> <?php echo $bathroom['text']; ?></li>
-                                        <hr>
                                     <?php endif; ?>
                                 </ul>
                                 <div class="room__box-text-btn">
