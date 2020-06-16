@@ -918,27 +918,14 @@ footer .footer__content__info-title {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-<<<<<<< HEAD
-=======
-  word-wrap: break-word;
-  min-height: 40px;
-  text-align: end;
->>>>>>> eae8dfaf9225e8dc433f2282acaa3a06dc2a82d8
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-<<<<<<< HEAD
   padding-bottom: 50px;
   border-bottom: 2px solid rgba(255, 255, 255, 0.6);
-=======
-  padding: 0.5vh 0;
-  color: #d38b24;
-  font-size: calc(12px + 1 * ((100vw - 320px) / 1600));
-  border-bottom: 1px solid black;
->>>>>>> eae8dfaf9225e8dc433f2282acaa3a06dc2a82d8
 }
 
 footer .footer__content__info-title-text h2 {
@@ -947,7 +934,6 @@ footer .footer__content__info-title-text h2 {
   line-height: 44px;
 }
 
-<<<<<<< HEAD
 footer .footer__content__info-title-text p {
   padding-top: 30px;
   font-weight: 500;
@@ -971,11 +957,6 @@ footer .footer__content__info-title-button a {
 footer .footer__content__info-title-button a:hover {
   background: rgba(255, 255, 255, 0.9);
   color: black;
-=======
-.room__content-item-down .room__box-text-btn {
-  padding-top: 5px;
-  width: 100%;
->>>>>>> eae8dfaf9225e8dc433f2282acaa3a06dc2a82d8
 }
 
 footer .footer__content__info-contact {

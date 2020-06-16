@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июн 07 2020 г., 22:19
+-- Время создания: Июн 16 2020 г., 13:44
 -- Версия сервера: 8.0.15
 -- Версия PHP: 7.3.9
 
@@ -48,6 +48,28 @@ INSERT INTO `bathroom` (`id`, `name`, `image`, `core`, `facade`, `furniture`, `t
 (1, 'Тумба в ванную комнату', '6.jpg', 'ЛДСП EGGER влагостойкий', '', 'Blum', 'Искусственный камень Tristone', '', 1),
 (2, 'Тумба в ванную комнату', '19.jpg', 'ЛДСП EGGER влагостойкий', 'ЛДСП EGGER влагостойкий', 'Hettich tip-one', 'Искусственный камень Tristone', '', 1),
 (3, 'Тумба в ванную комнату', '34.jpg', 'ЛДСП влагостойкий EGGER', 'МДФ в плёнке глянец', 'Blum', 'Искусственный камень Tristone', '', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `bedroom`
+--
+
+CREATE TABLE `bedroom` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `image` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `status` int(11) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `bedroom`
+--
+
+INSERT INTO `bedroom` (`id`, `name`, `image`, `status`) VALUES
+(1, '', '1.jpg', 1),
+(2, '', '2.jpg', 1),
+(3, '', '3.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -117,6 +139,8 @@ CREATE TABLE `category` (
   `id` int(11) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `img` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `text` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `description` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `url` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `sort_order` int(11) NOT NULL,
   `status` int(11) NOT NULL DEFAULT '1'
@@ -126,10 +150,90 @@ CREATE TABLE `category` (
 -- Дамп данных таблицы `category`
 --
 
-INSERT INTO `category` (`id`, `name`, `img`, `url`, `sort_order`, `status`) VALUES
-(1, 'Кухни', '5.jpg', 'kitchen', 1, 1),
-(2, 'Шкафы', '11.jpg', 'wardrobe', 3, 1),
-(3, 'Ванны', '6.jpg', 'bathroom', 2, 1);
+INSERT INTO `category` (`id`, `name`, `img`, `text`, `description`, `url`, `sort_order`, `status`) VALUES
+(1, 'Кухни', '1.png', 'Кухни в современном стиле или классика. В производстве используем проверенную фурнитуру.', 'Кухня - Одна и самых важных комнат в доме, подходящая для встреч с семьей и друзьями. Мы производим не только надежные и высоко-функциональные кухни, но и делаем их стильными и уютными. Чтобы будущие кухни не только идеально подходили по размеру, но и выглядели в соответствии с Вашими пожеланиями.', 'kitchen', 1, 1),
+(2, 'Шкафы-купе и гардеробные', '2.png', 'Полностью функциональное наполнение и правильно используемое пространство.', 'Это ваш характер. Строгий, выдержанный стиль или яркий, дерзкий кантемпорари?', 'closet', 2, 1),
+(3, 'Мебель в ванную', '3.png', 'Правильные материалы и дизайн.', 'Ванная комната - место где начинается наш день. Качество мебели в ванной определяет продуманное хранение всех возможных предметов гигиены, а так же правильно подобранные материалы. Мы производим качественную мебель для ванных комнат исключительно из материалов с влагоустойчивыми свойствами.', 'bathroom', 3, 1),
+(4, 'Мебель в прихожую', '4.png', 'Правильное использование пространства.', 'Мебель в прихожую определяет игру дизайна по всему дому. Какое настроение вам хочется получать переступая порог своего дома? Подумайте. Мастерская Дизайна реализует даже самую сложную идею.', 'hall', 4, 1),
+(5, 'Мебель в спальню', '5.png', 'Кровати, комоды, туалетные столики, прикроватные тумбочки.', 'Спальная комната - место где мы набираемся сил. Именно поэтому мебель в спальной должна быть максимально кастомизирована.', 'bedroom', 5, 1),
+(6, 'Шкафы', '6.png', 'Современные системы распашных дверей.', 'Это ваш характер. Строгий, выдержанный стиль или яркий, дерзкий кантемпорари?', 'wardrobe', 6, 1),
+(7, 'Мебель в гостиную', '7.png', 'TV стенки, столовые группы, консоли и многое другое. Современный дизайн в сочетании с трендовыми материалами.', 'Мебель в гостиной комнате - это ваша визитная карточка. Здесь определенно стоит включить фантазию и не останавливаться на уже привычных вариантах.', 'lounge', 7, 1),
+(8, 'Мебель в детскую', '8.png', 'Продуманная система хранения.', 'Особое внимание в детской комнате стоит уделить вопросу хранения. Ведь именно здесь сложнее всего поддерживать порядок. Позаботьтесь о вопросе хранения игрушек и возможных мелких предметов заранее и в дальнейшем вам будет гораздо проще.', 'children', 8, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `children`
+--
+
+CREATE TABLE `children` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `image` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `status` int(11) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `children`
+--
+
+INSERT INTO `children` (`id`, `name`, `image`, `status`) VALUES
+(1, '', '1.jpg', 1),
+(2, '', '2.jpg', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `closet`
+--
+
+CREATE TABLE `closet` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `image` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `core` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `facade` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `furniture` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `system` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `door` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `text` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `status` int(11) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `closet`
+--
+
+INSERT INTO `closet` (`id`, `name`, `image`, `core`, `facade`, `furniture`, `system`, `door`, `text`, `status`) VALUES
+(1, 'Консоль подвесная', '1.jpg', 'ЛДСП Lamarty', 'МДФ в краске глянец', 'Ящик blum tip-one', '', '', '', 1),
+(2, 'Шкаф + прихожая зона', '11.jpg', 'ЛДСП Lamarty', '', '', 'Modus тонкий профиль', 'Зеркало серебро', '', 1),
+(3, 'Шкаф + прихожая зона', '12.jpg', 'ЛДСП EGGER', 'МДФ в плёнке EvoGlose', 'Blum', '', '', '', 1),
+(4, 'Шкаф Г-образный', '21.jpg', 'ЛДСП Lamarty', '', '', 'Aristo', 'Зеркало серебро', '', 1),
+(5, 'Шкаф прямой в прихожую', '24.jpg', 'ЛДСП EGGER', '', '', 'Aristo', 'Комбинированное: зеркало серебро + стекло в краске с пескоструйным рисунком', '', 1),
+(6, 'Шкаф угловой', '27.jpg', 'ЛДСП Lamarty', '', '', 'Modus тонкий профиль', 'Зеркало графит', '', 1),
+(7, 'Шкаф прямой', '29.jpg', 'Комбинированный ЛДСП + МДФ в плёнке', '', '', 'Modus', 'Зеркало серебро', '', 1),
+(8, 'Шкаф хозяйственный в санузел', '33.jpg', 'ЛДСП влагостойкий EGGER', '', '', 'Modus', 'Комбинированное ЛДСП', '', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `hall`
+--
+
+CREATE TABLE `hall` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `image` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `status` int(11) NOT NULL DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `hall`
+--
+
+INSERT INTO `hall` (`id`, `name`, `image`, `status`) VALUES
+(1, '', '1.jpg', 1),
+(2, '', '2.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -185,35 +289,25 @@ INSERT INTO `kitchen` (`id`, `name`, `image`, `core`, `facade`, `furniture`, `ta
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `wardrobe`
+-- Структура таблицы `lounge`
 --
 
-CREATE TABLE `wardrobe` (
+CREATE TABLE `lounge` (
   `id` int(11) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `image` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `core` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `facade` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `furniture` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `system` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `door` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `text` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `status` int(11) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Дамп данных таблицы `wardrobe`
+-- Дамп данных таблицы `lounge`
 --
 
-INSERT INTO `wardrobe` (`id`, `name`, `image`, `core`, `facade`, `furniture`, `system`, `door`, `text`, `status`) VALUES
-(1, 'Консоль подвесная', '1.jpg', 'ЛДСП Lamarty', 'МДФ в краске глянец', 'Ящик blum tip-one', '', '', '', 1),
-(2, 'Шкаф + прихожая зона', '11.jpg', 'ЛДСП Lamarty', '', '', 'Modus тонкий профиль', 'Зеркало серебро', '', 1),
-(3, 'Шкаф + прихожая зона', '12.jpg', 'ЛДСП EGGER', 'МДФ в плёнке EvoGlose', 'Blum', '', '', '', 1),
-(4, 'Шкаф Г-образный', '21.jpg', 'ЛДСП Lamarty', '', '', 'Aristo', 'Зеркало серебро', '', 1),
-(5, 'Шкаф прямой в прихожую', '24.jpg', 'ЛДСП EGGER', '', '', 'Aristo', 'Комбинированное: зеркало серебро + стекло в краске с пескоструйным рисунком', '', 1),
-(6, 'Шкаф угловой', '27.jpg', 'ЛДСП Lamarty', '', '', 'Modus тонкий профиль', 'Зеркало графит', '', 1),
-(7, 'Шкаф прямой', '29.jpg', 'Комбинированный ЛДСП + МДФ в плёнке', '', '', 'Modus', 'Зеркало серебро', '', 1),
-(8, 'Шкаф хозяйственный в санузел', '33.jpg', 'ЛДСП влагостойкий EGGER', '', '', 'Modus', 'Комбинированное ЛДСП', '', 1);
+INSERT INTO `lounge` (`id`, `name`, `image`, `status`) VALUES
+(1, '', '1.jpg', 1),
+(2, '', '2.jpg', 1),
+(3, '', '3.jpg', 1),
+(4, '', '4.jpg', 1);
 
 --
 -- Индексы сохранённых таблиц
@@ -223,6 +317,12 @@ INSERT INTO `wardrobe` (`id`, `name`, `image`, `core`, `facade`, `furniture`, `s
 -- Индексы таблицы `bathroom`
 --
 ALTER TABLE `bathroom`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `bedroom`
+--
+ALTER TABLE `bedroom`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -238,15 +338,33 @@ ALTER TABLE `category`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `children`
+--
+ALTER TABLE `children`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `closet`
+--
+ALTER TABLE `closet`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `hall`
+--
+ALTER TABLE `hall`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `kitchen`
 --
 ALTER TABLE `kitchen`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `wardrobe`
+-- Индексы таблицы `lounge`
 --
-ALTER TABLE `wardrobe`
+ALTER TABLE `lounge`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -260,6 +378,12 @@ ALTER TABLE `bathroom`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
+-- AUTO_INCREMENT для таблицы `bedroom`
+--
+ALTER TABLE `bedroom`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT для таблицы `catalog`
 --
 ALTER TABLE `catalog`
@@ -269,7 +393,25 @@ ALTER TABLE `catalog`
 -- AUTO_INCREMENT для таблицы `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT для таблицы `children`
+--
+ALTER TABLE `children`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT для таблицы `closet`
+--
+ALTER TABLE `closet`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+
+--
+-- AUTO_INCREMENT для таблицы `hall`
+--
+ALTER TABLE `hall`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT для таблицы `kitchen`
@@ -278,10 +420,10 @@ ALTER TABLE `kitchen`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
--- AUTO_INCREMENT для таблицы `wardrobe`
+-- AUTO_INCREMENT для таблицы `lounge`
 --
-ALTER TABLE `wardrobe`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+ALTER TABLE `lounge`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
