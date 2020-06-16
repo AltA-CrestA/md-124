@@ -8,69 +8,73 @@
     <title>Контакты &mdash; Мастерская Дизайна</title>
 </head>
 <body>
-<?php include ROOT . '/app/views/layouts/headerW.php'; ?>
+<?php include ROOT . '/app/views/layouts/header.php'; ?>
 <main class='wrapper'>
+    <section class="mainContact" data-parallax="scroll" data-image-src="/app/templates/img/cont.png" data-speed="0.2">
+        <h2>Контакты</h2>
+    </section>
     <section class="contact">
+        <h3>Звоните или приезжайте к нам в офис. Подпишитесь на нас в соцсетях. Или заполните форму обратной связи, мы свяжемся с вами в кратчайшие сроки.</h3>
         <div class="contact__content">
-            <h2>
-                Следите за последними новостями в наших социальных сетях.
-                Приезжайте к нам в офис. Или заполните форму обратной связи,
-                и мы свяжемся с вами, чтобы воплотить ваши самые смелые идеи!
-            </h2>
-            <div class="contact__content-item">
-                <div class="contact__content-item-box">
-                    <i class="fas fa-map-signs iconCont"></i>
-                    <div class="item__title">
-                        <h3>Красноярск</h3>
-                        <h4>ул. Шахтёров, 65, ТЦ Континент</h4>
+            <div class="contact__contant">
+                <div class="contact__contant-form">
+                    <div class="contact__contant-form-item">
+                        <div class="result-contact"></div>
+                    </div>
+                    <div class="contact__contant-form-item">
+                        <input type="text" name="name-contact" id="name-contact" placeholder='Ваше имя'>
+                    </div>
+                    <div class="contact__contant-form-item">
+                        <input type="tel" name="phone-contact" id="phone-contact" placeholder='Ваше телефон'>
+                    </div>
+                    <div class="contact__contant-form-item">
+                        <input type="email" name="email-contact" id="email-contact" placeholder='Ваше email'>
+                    </div>
+                    <div class="contact__contant-form-item">
+                        <textarea name="message-contact"  placeholder='Ваше сообщение' id="message-contact" cols="30" rows="10"></textarea>
                     </div>
                 </div>
-                <div class="contact__content-item-box">
-                    <i class="fas fa-mobile-alt iconCont"></i>
-                    <div class="item__title">
-                        <a href="tel:+79832693953">+7(983)269-39-53</a>
-                        <h4>пн-пт 10:00-20:00</h4>
+                <div class="contact__contant__icons">
+                    <div class="contact__contant__icons-icon">
+                        <div class="contact__contant__icons-icon-image">
+                            <img src="/app/templates/img/contacts/house1.png" alt="">
+                        </div>
+                        <div class="contact__contant__icons-icon-text">
+                            <h5>Красноярск</h5>
+                            <p>Шахтеров 65, ТЦ КОНТИНЕНТ, 2 этаж</p>
+                        </div>
                     </div>
-                </div>
-                <div class="contact__content-item-box">
-                    <i class="far fa-envelope iconCont"></i>
-                    <div class="item__title">
-                        <a href="mailto:md_124@mail.ru"> md_124@mail.ru</a>
-                        <h4>Присылайте свой запрос<br> в любое время!</h4>
+                    <div class="contact__contant__icons-icon">
+                        <div class="contact__contant__icons-icon-image">
+                            <img src="/app/templates/img/contacts/mobile1.png" alt="">
+                        </div>
+                        <div class="contact__contant__icons-icon-text">
+                            <h5>+7 983 269-39-53</h5>
+                            <p>Ежедневно с 10:00-20:00</p>
+                        </div>
+                    </div>
+                    <div class="contact__contant__icons-icon">
+                        <div class="contact__contant__icons-icon-image">
+                            <img src="/app/templates/img/contacts/email1.png" alt="">
+                        </div>
+                        <div class="contact__contant__icons-icon-text">
+                            <h5>md_124@mail.ru</h5>
+                            <p>Присылайте нам свой запрос в любое время!</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <div class="result-contact"></div>
-    <section class='formSection'>
-        <div class="formSection__content">
-            <div class="formSection__content__form">
-            </div>
-            <div class="formSection__content__form">
-                <label for="name-contact">Ваше имя</label>
-                <input type="text" name="name-contact" id="name-contact">
-            </div>
-            <div class="formSection__content__form">
-                <label for="phone-contact">Ваш тел<span>.</span><span class='phoneReturn'>ефон</span></label>
-                <input type="tel" name="phone-contact" id="phone-contact">
-            </div>
-            <div class="formSection__content__form">
-                <label for="message-contact">Сообщение</label>
-                <textarea name="message-contact" id="message-contact" cols="30" rows="10"></textarea>
-            </div>
-            <div class="formSection__content__formBtn">
-                <button type="submit" name="submit-contact" id="submit-contact">Отправить</button>
-            </div>
+        <div class="contact__contant-form-item">
+            <button type="submit" name="submit-contact" id="submit-contact">Отправить сообщение</button>
         </div>
     </section>
     <section class='max'>
         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abaf226e55eee3fac9dd16648ca268f05adbbc45f82e76600b1ce4636e032971c&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=true"></script>
     </section>
-
 </main>
+
 <?php include ROOT . '/app/views/layouts/footer.php'; ?>
-<script src="/app/templates/plugins/jquery/jquery.min.js"></script>
-<script src="/app/templates/js/script.js"></script>
+
 </body>
 </html>

@@ -30,16 +30,15 @@ class SiteController
         $errors = array();
         $success = array();
         $failure = array();
-        if (trim($_POST['name-contact']) == '') {
+        if (trim($_POST['name-popup']) == '') {
             $errors[] = 'Укажите Имя <br/>';
         }
-        if (trim($_POST['phone-contact']) == '') {
+        if (trim($_POST['phone-popup']) == '') {
             $errors[] = 'Укажите номер телефона';
         }
         if (empty($errors)) {
-            $result = "Имя пользователя: " .$_POST['name-contact'] . "<br/>";
-            $result .= "Телефон пользователя: " .$_POST['phone-contact'] . "<br/>";
-            $result .= "Сообщение пользователя: " .$_POST['message-contact'] . "<br/>";
+            $result = "Имя пользователя: " .$_POST['name-popup'] . "<br/>";
+            $result .= "Телефон пользователя: " .$_POST['phone-popup'] . "<br/>";
             Project::sendMail($result);
             $success = 'Спасибо, наш специалист свяжется с вами в ближайшее время!';
         } else {
@@ -63,16 +62,17 @@ class SiteController
         $errors = array();
         $success = array();
         $failure = array();
-        if (trim($_POST['name-form']) == '') {
+        if (trim($_POST['name-contact']) == '') {
             $errors[] = 'Укажите Имя <br/>';
         }
-        if (trim($_POST['phone-form']) == '') {
+        if (trim($_POST['phone-contact']) == '') {
             $errors[] = 'Укажите номер телефона';
         }
         if (empty($errors)) {
-            $result = "Имя пользователя: " .$_POST['name-form'] . "<br/>";
-            $result .= "Телефон пользователя: " .$_POST['phone-form'] . "<br/>";
-            $result .= "Сообщение пользователя: " .$_POST['message-form'] . "<br/>";
+            $result = "Имя пользователя: " .$_POST['name-contact'] . "<br/>";
+            $result .= "Телефон пользователя: " .$_POST['phone-contact'] . "<br/>";
+            $result .= "E-mail пользователя: " .$_POST['email-contact'] . "<br/>";
+            $result .= "Сообщение пользователя: " .$_POST['message-contact'] . "<br/>";
             Project::sendMail($result);
             $success = 'Спасибо, наш специалист свяжется с вами в ближайшее время!';
         } else {

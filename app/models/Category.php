@@ -26,6 +26,7 @@ class Category
             $categoryList[$i]['id'] = $row['id'];
             $categoryList[$i]['name'] = $row['name'];
             $categoryList[$i]['img'] = $row['img'];
+            $categoryList[$i]['text'] = $row['text'];
             $categoryList[$i]['url'] = $row['url'];
             $i++;
         }
@@ -36,13 +37,13 @@ class Category
     /**
      * Returns an array of categories
      */
-    public static function getCategoryById($categoryId)
+    public static function getCategoryById($categoryUrl)
     {
 
             $db = Db::getConnection();
 
             $result = $db->query("SELECT * FROM category "
-                . "WHERE url = '$categoryId'");
+                . "WHERE url = '$categoryUrl'");
 
             $result->setFetchMode(PDO::FETCH_ASSOC);
 

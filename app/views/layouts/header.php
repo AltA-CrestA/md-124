@@ -13,13 +13,16 @@
 					<li class='underline'>
 						<a href="/projects">Наши проекты</a>
 					</li>
+                    <li class='underline'>
+                        <a href="#">Отзывы</a>
+                    </li>
 					<li class='underline'>
 						<a href="/contacts">Контакты</a>
 					</li>
 				</ul>
 			</div>
 			<div class="header__content-phone">
-				<a href="#">+7(391)209-39-59</a>
+				<a href="tel:+73912093959">+7(391)209-39-59</a>
 			</div>
 			<div class="header__burger">
       			<span></span>

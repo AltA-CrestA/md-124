@@ -69,14 +69,14 @@ class Project
     }
 
     /**
-     * Returns an array of BathroomProjects
+     * Returns an array of ClosetProjects
      */
-    public static function getWardrobeProjectsListByCategory()
+    public static function getClosetProjectsListByCategory()
     {
 
         $db = Db::getConnection();
         $projects = array();
-        $result = $db->query("SELECT * FROM wardrobe "
+        $result = $db->query("SELECT * FROM closet "
             . "WHERE status = '1' "
             . "ORDER BY id ASC ");
 
@@ -97,11 +97,103 @@ class Project
         return $projects;
     }
 
+    /**
+     * Returns an array of HallProjects
+     */
+    public static function getHallProjectsListByCategory()
+    {
+
+        $db = Db::getConnection();
+        $projects = array();
+        $result = $db->query("SELECT * FROM hall "
+            . "WHERE status = '1' "
+            . "ORDER BY id ASC ");
+
+        $i = 0;
+        while ($row = $result->fetch()) {
+            $projects[$i]['id'] = $row['id'];
+            $projects[$i]['name'] = $row['name'];
+            $projects[$i]['image'] = $row['image'];
+            $i++;
+        }
+
+        return $projects;
+    }
+
+    /**
+     * Returns an array of BedroomProjects
+     */
+    public static function getBedroomProjectsListByCategory()
+    {
+
+        $db = Db::getConnection();
+        $projects = array();
+        $result = $db->query("SELECT * FROM bedroom "
+            . "WHERE status = '1' "
+            . "ORDER BY id ASC ");
+
+        $i = 0;
+        while ($row = $result->fetch()) {
+            $projects[$i]['id'] = $row['id'];
+            $projects[$i]['name'] = $row['name'];
+            $projects[$i]['image'] = $row['image'];
+            $i++;
+        }
+
+        return $projects;
+    }
+
+    /**
+     * Returns an array of LoungeProjects
+     */
+    public static function getLoungeProjectsListByCategory()
+    {
+
+        $db = Db::getConnection();
+        $projects = array();
+        $result = $db->query("SELECT * FROM lounge "
+            . "WHERE status = '1' "
+            . "ORDER BY id ASC ");
+
+        $i = 0;
+        while ($row = $result->fetch()) {
+            $projects[$i]['id'] = $row['id'];
+            $projects[$i]['name'] = $row['name'];
+            $projects[$i]['image'] = $row['image'];
+            $i++;
+        }
+
+        return $projects;
+    }
+
+    /**
+     * Returns an array of LoungeProjects
+     */
+    public static function getChildrenProjectsListByCategory()
+    {
+
+        $db = Db::getConnection();
+        $projects = array();
+        $result = $db->query("SELECT * FROM children "
+            . "WHERE status = '1' "
+            . "ORDER BY id ASC ");
+
+        $i = 0;
+        while ($row = $result->fetch()) {
+            $projects[$i]['id'] = $row['id'];
+            $projects[$i]['name'] = $row['name'];
+            $projects[$i]['image'] = $row['image'];
+            $i++;
+        }
+
+        return $projects;
+    }
+
     public static function sendMail($result)
     {
 
-        $mail_to = "sale@irmedical.ru";
-        $subject = "Заполненая контактная форма на сайте";
+        $mail_to = "develop@webskill24.ru";
+        $subject = "Заполнена контактная форма на сайте";
 
         $headers = "MIME-Version: 1.0\r\n";
         $headers .= "Content-type: text/html; charset=utf-8\r\n";

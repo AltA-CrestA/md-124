@@ -10,6 +10,9 @@
 <body>
 <?php include ROOT . '/app/views/layouts/header.php'; ?>
 <main class='wrapper'>
+
+<!--    ФРОНТАЛЬНАЯ СЕКЦИЯ  -->
+
     <section class="pAmainSection">
         <div class="pAmainSection__content">
             <div class="pAmainSection__content-item">
@@ -38,26 +41,32 @@
             </div>
         </div>
     </section>
+
+    <!--    КАТЕГОРИИ  -->
+
     <section class="firsprogect">
         <div class="firsprogect__content">
-            <h2>Выберете категорию</h2>
+            <h1>Что мы делаем?</h1>
             <div class="firsprogect__content-item">
 
                 <?php foreach ($categoryList as $category): ?>
-                <div class="one">
-                    <a href="/projects/<?php echo $category['url']; ?>">
-                        <img src="/app/templates/img/download/<?php echo $category['img']; ?>" alt="">
-                        <h3><?php echo $category['name']; ?></h3>
-                    </a>
-                </div>
+                    <div class="grid<?php echo $category['id']; ?> catalogIMG">
+                        <a href="/projects/<?php echo $category['url']; ?>">
+                            <img src="/app/templates/img/category/<?php echo $category['img']; ?>" alt="">
+                        </a>
+                        <h2>
+                            <a href="/<?php echo $category['url']; ?>"><?php echo $category['name']; ?></a>
+                        </h2>
+                        <p><?php echo $category['text']; ?></p>
+                    </div>
                 <?php endforeach; ?>
-            </div>
 
+            </div>
         </div>
     </section>
 </main>
+
 <?php include ROOT . '/app/views/layouts/footer.php'; ?>
-<script src="/app/templates/plugins/jquery/jquery.min.js"></script>
-<script src="/app/templates/js/script.min.js"></script>
+
 </body>
 </html>

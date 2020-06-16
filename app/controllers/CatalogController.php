@@ -22,27 +22,28 @@ class CatalogController
 
         $categoriesId = Category::getCategoryById($categoryUrl);
 
+        $categoryProjectsKitchen = array();
+        $categoryProjectsKitchen = Project::getKitchenProjectsListByCategory();
 
-        if ($categoriesId['url'] == 'kitchen') {
-            $categoryProjectsKitchen = Project::getKitchenProjectsListByCategory();
+        $categoryProjectsBathroom = array();
+        $categoryProjectsBathroom = Project::getBathroomProjectsListByCategory();
 
-            require_once ROOT . '/app/views/catalog/kitchen.php';
+        $categoryProjectsCloset = array();
+        $categoryProjectsCloset = Project::getClosetProjectsListByCategory();
 
-        }
+        $categoryProjectsHall = array();
+        $categoryProjectsHall = Project::getHallProjectsListByCategory();
 
-        if ($categoriesId['url'] == 'bathroom') {
-            $categoryProjectsBathroom = Project::getBathroomProjectsListByCategory();
+        $categoryProjectsBedroom = array();
+        $categoryProjectsBedroom = Project::getBedroomProjectsListByCategory();
 
-            require_once ROOT . '/app/views/catalog/bathroom.php';
+        $categoryProjectsLounge = array();
+        $categoryProjectsLounge = Project::getLoungeProjectsListByCategory();
 
-        }
+        $categoryProjectsChildren = array();
+        $categoryProjectsChildren = Project::getChildrenProjectsListByCategory();
 
-        if ($categoriesId['url'] == 'wardrobe') {
-            $categoryProjectsWardrobe = Project::getWardrobeProjectsListByCategory();
-
-            require_once ROOT . '/app/views/catalog/wardrobe.php';
-
-        }
+        require_once ROOT . '/app/views/catalog/category.php';
 
         return true;
     }

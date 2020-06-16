@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a92d3a3d23.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/app/templates/plugins/animate/animate.min.css">
     <link rel="stylesheet" href="/app/templates/css/style.min.css">
     <title>Главная &mdash; Мастерская Дизайна</title>
 </head>
 <body>
 <?php include ROOT . '/app/views/layouts/header.php'; ?>
-<main>
+<main class="wrapper">
 
     <!-- Основная секция -->
-    <section class='mainSection' data-parallax="scroll" data-image-src="/app/templates/img/02.jpg" data-speed="0.5">
+    <section class='mainSection' data-parallax="scroll" data-image-src="/app/templates/img/02.png" data-speed="0.2">
         <div class="mainSection__content" id="inline-popups">
             <h1>Мебель на заказ в Красноярске</h1>
             <p>Изготовление корпусной мебели любой сложности под заказ</p>
@@ -26,20 +27,18 @@
             <h2>О компании</h2>
             <div class="aboutUsSection__content__text">
                 <p>
-                    Наша компания занимается производством мебели более 5 лет - мы изготавливаем кухни,
-                    мебельные гарнитуры для спален, гостиных и любых другим помещений.
+                    Мы успешно работаем на рынке уже более 10 лет
                 </p>
-                <br>
-                <ul>
-                    <li>Возможность для наших клиентов</li>
-                    <li>
-                        Различные материалы и технологии - корпусная мебель, модели из массива дерева,
-                        варианты из ЛДСП и МДФ, натуральный камень
-                    </li>
-                    <li>Красивое оформление - обшивка шпоном, покрытие эмалью</li>
-                    <li>Изготовление на заказ, реализация авторских проектов и вариантов дизайнов</li>
-                    <li>Оптимальные расценки благодаря собственному производству</li>
-                </ul>
+                <p>
+                    Мы выполняем заказы любой сложности и стараемся создавать интерьеры вне времени, но с учетом современных тенденций.<br>
+                    Каждый наш проект-это не просто мебельное обустройство, это возможность реализовать Ваши смелые фантазии, учесть все бытовые потребности, показать свой характер и создать максимальный комфорт для жизни.
+                </p>
+                <p>
+                    При изготовлении нашей продукции мы используем материалы и комплектующие ведущих производителей.<br>Мы гарантируем высокое качество и доступные цены
+                </p>
+                <p>
+                    Сделаем бесплатный 3D проект и выезд замерщика на дом.<br>Даём возможность купить любую позицию в рассрочку до 6 месяцев и без %
+                </p>
             </div>
         </div>
     </section>
@@ -48,15 +47,35 @@
     <section class='progectUsSection'>
         <div class="progectUsSection__content">
             <h2>Наши проекты</h2>
-            <div class="progectUsSection__content-item totalItem">
-                <div class="item">
-                    <picture><source srcset="/app/templates/img/progectAll/1.webp" type="image/webp"><img src="/app/templates/img/progectAll/1.png" alt=""></picture>
-                </div>
-                <div class="item">
-                    <picture><source srcset="/app/templates/img/progectAll/2.webp" type="image/webp"><img src="/app/templates/img/progectAll/2.png" alt=""></picture>
-                </div>
-                <div class="three item">
-                    <picture><source srcset="/app/templates/img/progectAll/4.webp" type="image/webp"><img src="/app/templates/img/progectAll/4.png" alt=""></picture>
+            <div class="bar">
+                <div class="slider">
+                    <div class="slider__item">
+                        <picture><source srcset="/app/templates/img/slider/1.webp" type="image/webp"><img src="img/slider/1.png" alt=""></picture>
+                    </div>
+                    <div class="slider__item">
+                        <picture><source srcset="/app/templates/img/slider/2.webp" type="image/webp"><img src="img/slider/2.png" alt=""></picture>
+                    </div>
+                    <div class="slider__item">
+                        <picture><source srcset="/app/templates/img/slider/3.webp" type="image/webp"><img src="img/slider/3.png" alt=""></picture>
+                    </div>
+                    <div class="slider__item">
+                        <picture><source srcset="/app/templates/img/slider/4.webp" type="image/webp"><img src="img/slider/4.png" alt=""></picture>
+                    </div>
+                    <div class="slider__item">
+                        <picture><source srcset="/app/templates/img/slider/5.webp" type="image/webp"><img src="img/slider/5.png" alt=""></picture>
+                    </div>
+                    <div class="slider__item">
+                        <picture><source srcset="/app/templates/img/slider/6.webp" type="image/webp"><img src="img/slider/6.png" alt=""></picture>
+                    </div>
+                    <div class="slider__item">
+                        <picture><source srcset="/app/templates/img/slider/7.webp" type="image/webp"><img src="img/slider/7.png" alt=""></picture>
+                    </div>
+                    <div class="slider__item">
+                        <picture><source srcset="/app/templates/img/slider/8.webp" type="image/webp"><img src="img/slider/8.png" alt=""></picture>
+                    </div>
+                    <div class="slider__item">
+                        <picture><source srcset="/app/templates/img/slider/9.webp" type="image/webp"><img src="img/slider/9.png" alt=""></picture>
+                    </div>
                 </div>
             </div>
             <div class="progectUsSection__content-button">
@@ -70,48 +89,36 @@
         <div class="catalogSection__content">
             <h2>Преимущества нашей компании</h2>
             <div class="catalogSection__content-item">
-                <div class="catalogSection__content-item-box">
-                    <h6 class="one"><i class="fas fa-check-double"></i></h6>
-                    <p>Высокотехнологичная обработка используемых материалов</p>
+                <div class="catalogSection__content-item-box wow bounceInLeft">
+                    <picture><source srcset="/app/templates/img/us_progect/tick1.webp" type="image/webp"><img src="/app/templates/img/us_progect/tick1.png" alt=""></picture>
+                    <p>Мы используем благородные, премиальные материалы</p>
                 </div>
-                <div class="catalogSection__content-item-box">
-                    <h6><i class="fas fa-drafting-compass compass two"></i></h6>
-                    <p>Индивидуальный подход к проектированию и изготовлению заказов</p>
+                <div class="catalogSection__content-item-box wow bounceInRight">
+                    <picture><source srcset="/app/templates/img/us_progect/light-bulb1.webp" type="image/webp"><img src="/app/templates/img/us_progect/light-bulb1.png" alt=""></picture>
+                    <p>Каждый наш проект-это произведение искусства, возможность реализовать Ваши смелые фантазии, учесть все потребности.</p>
                 </div>
-                <div class="catalogSection__content-item-box ">
-                    <h6><i class="fas fa-award three"></i></h6>
-                    <p>Гарантия качества на всех этапах производства</p>
+                <div class="catalogSection__content-item-box wow bounceInLeft">
+                    <picture><source srcset="/app/templates/img/us_progect/information1.webp" type="image/webp"><img src="/app/templates/img/us_progect/information1.png" alt=""></picture>
+                    <p>Отправьте нам заявку на расчет проекта, и вы убедитесь - наши цены ниже, чем у других производителей. Возможна рассрочка без процентов и участия банка.</p>
+                </div>
+                <div class="catalogSection__content-item-box wow bounceInRight">
+                    <p>Срок изготовления от 14 дней</p>
+                </div>
+                <div class="catalogSection__content-item-box wow bounceInLeft">
+                    <p>Мы следим за качеством мебели и предоставляем гарантию</p>
+                </div>
+                <div class="catalogSection__content-item-box wow bounceInRight">
+                    <p>Вызов замерщика и создание профессионального 3D проекта мебели</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Обратная форма связи -->
-    <div class="result-form"></div>
-    <section class='formSection'>
-        <div class="formSection__content">
-            <div class="formSection__content__form">
-                <label for="name-form">Ваше имя</label>
-                <input type="text" name="name-form" id="name-form">
-            </div>
-            <div class="formSection__content__form">
-                <label for="phone-form">Ваш тел<span>.</span><span class='phoneReturn'>ефон</span></label>
-                <input type="tel" name="phone-form" id="phone-form">
-            </div>
-            <div class="formSection__content__form">
-                <label for="message-form">Сообщение</label>
-                <textarea name="message-form" id="message-form" cols="30" rows="10"></textarea>
-            </div>
-            <div class="formSection__content__formBtn">
-                <button type="submit" name="submit-form" id="submit-form">Отправить</button>
+            <div class="catalogSection__content-button">
+                <a href="#popup" class="popup-link">ЗАКАЗАТЬ ЗАМЕР</a>
             </div>
         </div>
     </section>
 </main>
 
 <?php include ROOT . '/app/views/layouts/footer.php'; ?>
-<script src="/app/templates/plugins/jquery/jquery.min.js"></script>
-<script src="/app/templates/plugins/paralax/parallax.min.js"></script>
-<script src="/app/templates/js/script.js"></script>
+
 </body>
 </html>
