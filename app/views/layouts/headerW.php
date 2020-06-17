@@ -11,14 +11,14 @@
 						<a href="/">Главная</a>
 					</li>
 					<li class='underline'>
-						<a href="/projects">Наши проекты</a>
+						<a href="/projects">Каталог</a>
 					</li>
-                    <li class='underline'>
-                        <a href="#">Отзывы</a>
-                    </li>
 					<li class='underline'>
 						<a href="/contacts">Контакты</a>
 					</li>
+                    <li class='underline'>
+                        <a href="/reviews">Отзывы</a>
+                    </li>
 				</ul>
 			</div>
 			<div class="headerW__content-phone">

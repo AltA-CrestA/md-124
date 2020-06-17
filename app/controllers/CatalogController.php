@@ -48,6 +48,15 @@ class CatalogController
         return true;
     }
 
+    public function actionProject()
+    {
+
+        require_once ROOT . '/app/views/catalog/project.php';
+
+        return true;
+
+    }
+
     public function actionAjax()
     {
 

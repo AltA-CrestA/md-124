@@ -24,6 +24,15 @@ class SiteController
 
     }
 
+    public function actionReview()
+    {
+
+        require_once ROOT . '/app/views/site/reviews.php';
+
+        return true;
+
+    }
+
     public function actionAjax()
     {
 

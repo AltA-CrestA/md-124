@@ -31,12 +31,12 @@
                     <ul>
                         <li><a href="/">Главная</a></li>
                         <li><a href="/projects">Каталог</a></li>
+                        <li><a href="/reviews">Отзывы</a></li>
                         <li><a href="/contacts">Контакты</a></li>
-                        <li><a href="#">Отзывы</a></li>
                     </ul>
                 </div>
                 <div class="footer__content__info-contact-right">
-                    <h3>Контакты</h3>
+                    <h3>Контактная информация</h3>
                     <ul>
                         <li><a href="tel:+79832693953">+7 983 269-39-53</a></li>
                         <li><a href="mailto:md_124@mail.ru">md_124@mail.ru</a></li>

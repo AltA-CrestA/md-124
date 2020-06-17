@@ -27,44 +27,58 @@
 
                         <?php if ($categoriesId['url'] == 'kitchen'): ?>
                             <?php foreach ($categoryProjectsKitchen as $kitchen): ?>
-                                    <div class="room__box-image">
-                                        <img src="/app/templates/img/download/<?php echo $kitchen['image']; ?>" alt="" class="minimized">
-                                    </div>
+                                <div class="room__box-image">
+                                    <a href="/projects/kitchen/1">
+                                        <img src="/app/templates/img/download/<?php echo $kitchen['image']; ?>" alt="">
+                                    </a>
+                                </div>
                             <?php endforeach; ?>
                         <?php elseif ($categoriesId['url'] == 'bathroom'): ?>
                             <?php foreach ($categoryProjectsBathroom as $bathroom): ?>
                                 <div class="room__box-image">
-                                    <img src="/app/templates/img/download/<?php echo $bathroom['image']; ?>" alt="" class="minimized">
+                                    <a href="/projects/kitchen/2">
+                                        <img src="/app/templates/img/download/<?php echo $bathroom['image']; ?>" alt="">
+                                    </a>
                                 </div>
                             <?php endforeach; ?>
                         <?php elseif ($categoriesId['url'] == 'closet'): ?>
                             <?php foreach ($categoryProjectsCloset as $closet): ?>
                                 <div class="room__box-image">
-                                    <img src="/app/templates/img/download/<?php echo $closet['image']; ?>" alt="" class="minimized">
+                                    <a href="/projects/kitchen/3">
+                                        <img src="/app/templates/img/download/<?php echo $closet['image']; ?>" alt="">
+                                    </a>
                                 </div>
                             <?php endforeach; ?>
                         <?php elseif ($categoriesId['url'] == 'hall'): ?>
                             <?php foreach ($categoryProjectsHall as $hall): ?>
                                 <div class="room__box-image">
-                                    <img src="/app/templates/img/hall/<?php echo $hall['image']; ?>" alt="" class="minimized">
+                                    <a href="/projects/kitchen/4">
+                                        <img src="/app/templates/img/hall/<?php echo $hall['image']; ?>" alt="">
+                                    </a>
                                 </div>
                             <?php endforeach; ?>
                         <?php elseif ($categoriesId['url'] == 'bedroom'): ?>
                             <?php foreach ($categoryProjectsBedroom as $bedroom): ?>
                                 <div class="room__box-image">
-                                    <img src="/app/templates/img/bedroom/<?php echo $bedroom['image']; ?>" alt="" class="minimized">
+                                    <a href="/projects/kitchen/5">
+                                        <img src="/app/templates/img/bedroom/<?php echo $bedroom['image']; ?>" alt="">
+                                    </a>
                                 </div>
                             <?php endforeach; ?>
                         <?php elseif ($categoriesId['url'] == 'lounge'): ?>
                             <?php foreach ($categoryProjectsLounge as $lounge): ?>
                                 <div class="room__box-image">
-                                    <img src="/app/templates/img/lounge/<?php echo $lounge['image']; ?>" alt="" class="minimized">
+                                    <a href="/projects/kitchen/6">
+                                        <img src="/app/templates/img/lounge/<?php echo $lounge['image']; ?>" alt="">
+                                    </a>
                                 </div>
                             <?php endforeach; ?>
                         <?php elseif ($categoriesId['url'] == 'children'): ?>
                             <?php foreach ($categoryProjectsChildren as $children): ?>
                                 <div class="room__box-image">
-                                    <img src="/app/templates/img/children/<?php echo $children['image']; ?>" alt="" class="minimized">
+                                    <a href="/projects/kitchen/7">
+                                        <img src="/app/templates/img/children/<?php echo $children['image']; ?>" alt="">
+                                    </a>
                                 </div>
                             <?php endforeach; ?>
                         <?php endif; ?>
