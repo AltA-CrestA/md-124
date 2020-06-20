@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="5b56a1e1-de16-4ad3-a291-d3164976df77" name="SprintHost">
+        <fileTransfer rootFolder="/home/a0350175" accessType="SFTP" host="141.8.195.60" port="22" sshConfigId="e828b934-f777-41e2-8b65-9aae90bcd820" sshConfig="a0350175@141.8.195.60:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

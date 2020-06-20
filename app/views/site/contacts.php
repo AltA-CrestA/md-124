@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/app/templates/css/style.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/app/templates/css/style.min.css">
     <script src="https://kit.fontawesome.com/a92d3a3d23.js" crossorigin="anonymous"></script>
     <title>Контакты &mdash; Мастерская Дизайна</title>
 </head>
@@ -16,13 +16,19 @@
         <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active" data-interval="10000">
-                    <img src="/app/templates/img/contacts/12.jpg" class="d-block w-100" alt="...">
+                    <img src="/app/templates/img/contacts/1.png" class="d-block" alt="...">
                 </div>
                 <div class="carousel-item" data-interval="2000">
-                    <img src="/app/templates/img/contacts/22.jpg" class="d-block w-100" alt="...">
+                    <img src="/app/templates/img/contacts/2.png" class="d-block" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="/app/templates/img/contacts/33.jpg" class="d-block w-100" alt="...">
+                    <img src="/app/templates/img/contacts/3.png" class="d-block" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="/app/templates/img/contacts/4.png" class="d-block" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="/app/templates/img/contacts/5.png" class="d-block" alt="...">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">

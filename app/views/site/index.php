@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a92d3a3d23.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="/app/templates/plugins/animate/animate.min.css">
     <link rel="stylesheet" href="/app/templates/css/style.min.css">
     <title>Главная &mdash; Мастерская Дизайна</title>
@@ -13,11 +14,38 @@
 <main class="wrapper">
 
     <!-- Основная секция -->
-    <section class='mainSection' data-parallax="scroll" data-image-src="/app/templates/img/02.png" data-speed="0.2">
-        <div class="mainSection__content" id="inline-popups">
+    <section class='mainSection'>
+        <div class="mainSection__content" >
             <h1>Мебель на заказ в Красноярске</h1>
             <p>Изготовление корпусной мебели любой сложности под заказ</p>
             <a href="/projects">Каталог</a>
+        </div>
+        <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-interval="2000">
+                    <picture><source srcset="/app/templates/img/mainslider/1.webp" type="image/webp"><img src="/app/templates/img/mainslider/1.png"  alt="..."></picture>
+                </div>
+                <div class="carousel-item" data-interval="2000">
+                    <picture><source srcset="/app/templates/img/mainslider/2.webp" type="image/webp"><img src="/app/templates/img/mainslider/2.png"  alt="..."></picture>
+                </div>
+                <div class="carousel-item" data-interval="2000">
+                    <picture><source srcset="/app/templates/img/mainslider/3.webp" type="image/webp"><img src="/app/templates/img/mainslider/3.jpg"  alt="..."></picture>
+                </div>
+                <div class="carousel-item" data-interval="2000">
+                    <picture><source srcset="/app/templates/img/mainslider/4.webp" type="image/webp"><img src="/app/templates/img/mainslider/4.jpg"  alt="..."></picture>
+                </div>
+                <div class="carousel-item" data-interval="2000">
+                    <picture><source srcset="/app/templates/img/mainslider/5.webp" type="image/webp"><img src="/app/templates/img/mainslider/5.jpg"  alt="..."></picture>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
     </section>
 
@@ -50,31 +78,31 @@
             <div class="bar">
                 <div class="slider">
                     <div class="slider__item">
-                        <picture><source srcset="/app/templates/img/slider/1.webp" type="image/webp"><img src="img/slider/1.png" alt=""></picture>
+                        <picture><source srcset="/app/templates/img/slider/1.webp" type="image/webp"><img src="/app/templates/img/slider/1.jpg" alt=""></picture>
                     </div>
                     <div class="slider__item">
-                        <picture><source srcset="/app/templates/img/slider/2.webp" type="image/webp"><img src="img/slider/2.png" alt=""></picture>
+                        <picture><source srcset="/app/templates/img/slider/2.webp" type="image/webp"><img src="/app/templates/img/slider/2.jpg" alt=""></picture>
                     </div>
                     <div class="slider__item">
-                        <picture><source srcset="/app/templates/img/slider/3.webp" type="image/webp"><img src="img/slider/3.png" alt=""></picture>
+                        <picture><source srcset="/app/templates/img/slider/3.webp" type="image/webp"><img src="/app/templates/img/slider/3.jpg" alt=""></picture>
                     </div>
                     <div class="slider__item">
-                        <picture><source srcset="/app/templates/img/slider/4.webp" type="image/webp"><img src="img/slider/4.png" alt=""></picture>
+                        <picture><source srcset="/app/templates/img/slider/4.webp" type="image/webp"><img src="/app/templates/img/slider/4.jpg" alt=""></picture>
                     </div>
                     <div class="slider__item">
-                        <picture><source srcset="/app/templates/img/slider/5.webp" type="image/webp"><img src="img/slider/5.png" alt=""></picture>
+                        <picture><source srcset="/app/templates/img/slider/5.webp" type="image/webp"><img src="/app/templates/img/slider/5.jpg" alt=""></picture>
                     </div>
                     <div class="slider__item">
-                        <picture><source srcset="/app/templates/img/slider/6.webp" type="image/webp"><img src="img/slider/6.png" alt=""></picture>
+                        <picture><source srcset="/app/templates/img/slider/6.webp" type="image/webp"><img src="/app/templates/img/slider/6.jpg" alt=""></picture>
                     </div>
                     <div class="slider__item">
-                        <picture><source srcset="/app/templates/img/slider/7.webp" type="image/webp"><img src="img/slider/7.png" alt=""></picture>
+                        <picture><source srcset="/app/templates/img/slider/7.webp" type="image/webp"><img src="/app/templates/img/slider/7.jpg" alt=""></picture>
                     </div>
                     <div class="slider__item">
-                        <picture><source srcset="/app/templates/img/slider/8.webp" type="image/webp"><img src="img/slider/8.png" alt=""></picture>
+                        <picture><source srcset="/app/templates/img/slider/8.webp" type="image/webp"><img src="/app/templates/img/slider/8.jpg" alt=""></picture>
                     </div>
                     <div class="slider__item">
-                        <picture><source srcset="/app/templates/img/slider/9.webp" type="image/webp"><img src="img/slider/9.png" alt=""></picture>
+                        <picture><source srcset="/app/templates/img/slider/9.webp" type="image/webp"><img src="/app/templates/img/slider/9.jpg" alt=""></picture>
                     </div>
                 </div>
             </div>
@@ -119,6 +147,8 @@
 </main>
 
 <?php include ROOT . '/app/views/layouts/footer.php'; ?>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
 </body>
 </html>

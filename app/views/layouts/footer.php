@@ -1,4 +1,4 @@
-<footer data-parallax="scroll" data-image-src="/app/templates/img/footer.png" data-speed="0.2">
+<footer data-parallax="scroll" data-image-src="/app/templates/img/footer1.png" data-speed="0.2">
     <div class="footer__content">
         <div class="footer__content__icon">
             <div class="footer__content__icon-logo">
@@ -49,10 +49,10 @@
     </div>
 </footer>
 <?php include ROOT . '/app/views/layouts/popup.php'; ?>
+<script src="/app/templates/plugins/animate/wow.min.js"></script>
 <script src="/app/templates/plugins/jquery/jquery.min.js"></script>
 <script src="/app/templates/plugins/slider/slick.min.js"></script>
 <script src="/app/templates/plugins/paralax/parallax.min.js"></script>
-<script src="/app/templates/plugins/animate/wow.min.js"></script>
 <script src="/app/templates/js/script.js"></script>
 
 

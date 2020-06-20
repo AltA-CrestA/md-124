@@ -70,13 +70,14 @@ $(window).scroll(function () {
 	scrollPrev = scrolled;
 });;
 //  Слайдер
+//  Слайдер
 $(document).ready(function () {
 	$('.slider').slick({
 		arrows: true,
 		dots: true,
 		adaptiveHeight: false,
 		slidesToShow: 3,
-		slidesToScroll: 2,
+		slidesToScroll: 3,
 		speed: 1000,
 		easing: 'easeInExpo',
 		infinite: true,
@@ -98,8 +99,8 @@ $(document).ready(function () {
 			{
 				breakpoint: 400,
 				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 1,
+					slidesToShow: 3,
+					slidesToScroll: 3,
 					infinite: true,
 					dots: true,
 				},
@@ -107,7 +108,7 @@ $(document).ready(function () {
 		],
 	});
 });
-;
+
 const popupLinks = document.querySelectorAll('.popup-link');
 const lockPadding = document.querySelectorAll('.lock-padding');
 
