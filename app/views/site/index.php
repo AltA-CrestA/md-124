@@ -54,19 +54,18 @@
         <div class="aboutUsSection__content">
             <h2>О компании</h2>
             <div class="aboutUsSection__content__text">
-                <p>
-                    Мы успешно работаем на рынке уже более 10 лет
-                </p>
-                <p>
-                    Мы выполняем заказы любой сложности и стараемся создавать интерьеры вне времени, но с учетом современных тенденций.<br>
-                    Каждый наш проект-это не просто мебельное обустройство, это возможность реализовать Ваши смелые фантазии, учесть все бытовые потребности, показать свой характер и создать максимальный комфорт для жизни.
-                </p>
-                <p>
-                    При изготовлении нашей продукции мы используем материалы и комплектующие ведущих производителей.<br>Мы гарантируем высокое качество и доступные цены
-                </p>
-                <p>
-                    Сделаем бесплатный 3D проект и выезд замерщика на дом.<br>Даём возможность купить любую позицию в рассрочку до 6 месяцев и без %
-                </p>
+                <p>	
+					Мы успешно работаем на рынке уже более 10 лет
+				</p>
+				<p>	
+					Мы выполняем заказы любой сложности и стараемся создавать интерьеры вне времени, но с учетом современных тенденций. <br> Каждый наш проект-это не просто мебельное обустройство, это возможность реализовать Ваши смелые фантазии, учесть все бытовые потребности, показать свой характер и создать максимальный комфорт для жизни.
+				</p>
+				<p>	
+					При изготовлении нашей продукции мы используем материалы и комплектующие ведущих производителей. <br> Мы гарантируем высокое качество и доступные цены
+				</p>
+				<p>	
+					Сделаем бесплатный 3D проект и выезд замерщика на дом. <br> Даём возможность купить нашу мебель в рассрочку до 6 месяцев и без % <br>Более подробную информацию уточняйте у нашего менеджера
+				</p>
             </div>
         </div>
     </section>
@@ -78,31 +77,31 @@
             <div class="bar">
                 <div class="slider">
                     <div class="slider__item">
-                        <picture><source srcset="/app/templates/img/slider/1.webp" type="image/webp"><img src="/app/templates/img/slider/1.jpg" alt=""></picture>
+                        <picture><source srcset="/app/templates/img/slider/1.svg" type="image/webp"><img src="/app/templates/img/slider/1.svg" alt=""></picture>
                     </div>
                     <div class="slider__item">
-                        <picture><source srcset="/app/templates/img/slider/2.webp" type="image/webp"><img src="/app/templates/img/slider/2.jpg" alt=""></picture>
+                        <picture><source srcset="/app/templates/img/slider/2.svg" type="image/webp"><img src="/app/templates/img/slider/2.svg" alt=""></picture>
                     </div>
                     <div class="slider__item">
-                        <picture><source srcset="/app/templates/img/slider/3.webp" type="image/webp"><img src="/app/templates/img/slider/3.jpg" alt=""></picture>
+                        <picture><source srcset="/app/templates/img/slider/3.svg" type="image/webp"><img src="/app/templates/img/slider/3.svg" alt=""></picture>
                     </div>
                     <div class="slider__item">
-                        <picture><source srcset="/app/templates/img/slider/4.webp" type="image/webp"><img src="/app/templates/img/slider/4.jpg" alt=""></picture>
+                        <picture><source srcset="/app/templates/img/slider/4.svg" type="image/webp"><img src="/app/templates/img/slider/4.svg" alt=""></picture>
                     </div>
                     <div class="slider__item">
-                        <picture><source srcset="/app/templates/img/slider/5.webp" type="image/webp"><img src="/app/templates/img/slider/5.jpg" alt=""></picture>
+                        <picture><source srcset="/app/templates/img/slider/5.svg" type="image/webp"><img src="/app/templates/img/slider/5.svg" alt=""></picture>
                     </div>
                     <div class="slider__item">
-                        <picture><source srcset="/app/templates/img/slider/6.webp" type="image/webp"><img src="/app/templates/img/slider/6.jpg" alt=""></picture>
+                        <picture><source srcset="/app/templates/img/slider/6.svg" type="image/webp"><img src="/app/templates/img/slider/6.svg" alt=""></picture>
                     </div>
                     <div class="slider__item">
-                        <picture><source srcset="/app/templates/img/slider/7.webp" type="image/webp"><img src="/app/templates/img/slider/7.jpg" alt=""></picture>
+                        <picture><source srcset="/app/templates/img/slider/7.svg" type="image/webp"><img src="/app/templates/img/slider/7.svg" alt=""></picture>
                     </div>
                     <div class="slider__item">
-                        <picture><source srcset="/app/templates/img/slider/8.webp" type="image/webp"><img src="/app/templates/img/slider/8.jpg" alt=""></picture>
+                        <picture><source srcset="/app/templates/img/slider/8.svg" type="image/webp"><img src="/app/templates/img/slider/8.svg" alt=""></picture>
                     </div>
                     <div class="slider__item">
-                        <picture><source srcset="/app/templates/img/slider/9.webp" type="image/webp"><img src="/app/templates/img/slider/9.jpg" alt=""></picture>
+                        <picture><source srcset="/app/templates/img/slider/9.svg" type="image/webp"><img src="/app/templates/img/slider/9.svg" alt=""></picture>
                     </div>
                 </div>
             </div>

@@ -15,7 +15,17 @@
             <div class="room__content-item">
                 <div class="room__content-item-up">
                     <div class="room__text">
-                        <h2><?php echo $categoriesId['name']; ?></h2>
+
+                        <?php if ($categoriesId['url'] == 'closet' or $categoriesId['url'] == 'wardrobe'): ?>
+                            <h2>
+                                <?php echo 'Шкафы, Шкафы-купе и гардеробные'; ?>
+                            </h2>
+                        <?php else: ?>
+                            <h2>
+                                <?php echo $categoriesId['name']; ?>
+                            </h2>
+                        <?php endif; ?>
+
                         <p>
                             <?php echo $categoriesId['description']; ?>
                         </p>
@@ -62,6 +72,14 @@
                                 <div class="room__box-image">
                                     <a href="/projects/kitchen/5">
                                         <img src="/app/templates/img/bedroom/<?php echo $bedroom['image']; ?>" alt="">
+                                    </a>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php elseif ($categoriesId['url'] == 'wardrobe'): ?>
+                            <?php foreach ($categoryProjectsCloset as $closet): ?>
+                                <div class="room__box-image">
+                                    <a href="/projects/kitchen/3">
+                                        <img src="/app/templates/img/download/<?php echo $closet['image']; ?>" alt="">
                                     </a>
                                 </div>
                             <?php endforeach; ?>

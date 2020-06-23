@@ -527,7 +527,7 @@ header .header__content-phone a:hover {
   line-height: 30px;
   font-size: calc(12px + 10 * ((100vw - 320px) / 1600));
   font-weight: 300;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 .pAmainSection {
@@ -1280,6 +1280,11 @@ footer .footer__content__info-contact-right ul .address {
   max-width: 1140px;
   margin: 0 auto 18px auto;
   height: 500px;
+}
+
+#map {
+  height: 500px;
+  width: 100%;
 }
 
 .review__content {
@@ -2234,9 +2239,9 @@ body a {
     width: 20vw;
   }
 
-  .aboutUsSection__content p {
+  .aboutUsSection__content__text p {
     line-height: 18px;
-    padding: 10px 0;
+    padding: 1px 0;
   }
 }
 
