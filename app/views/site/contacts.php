@@ -98,7 +98,7 @@
         </div>
     </section>
     <section class='max'>
-		<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=co.."></script>
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abaf226e55eee3fac9dd16648ca268f05adbbc45f82e76600b1ce4636e032971c&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=true"></script>
     </section>
 </main>
 

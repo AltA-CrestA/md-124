@@ -49,6 +49,7 @@
     </div>
 </footer>
 <?php include ROOT . '/app/views/layouts/popup.php'; ?>
+<?php include ROOT . '/app/views/layouts/socialButton.php'; ?>
 <script src="/app/templates/plugins/animate/wow.min.js"></script>
 <script src="/app/templates/plugins/jquery/jquery.min.js"></script>
 <script src="/app/templates/plugins/slider/slick.min.js"></script>

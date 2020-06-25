@@ -1509,7 +1509,7 @@ body.lock {
 }
 
 .popup__item input {
-  min-width: 700px;
+  min-width: 400px;
   margin-top: 40px;
   padding: 10px;
   border: 1px solid black;
@@ -1742,6 +1742,165 @@ body a {
   width: 50%;
   height: 2px;
 }
+
+.wrapper a {
+  opacity: 0.8;
+  -webkit-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+/*social share button*/
+
+.menu-item,
+.menu-open-button {
+  background: #ffffff;
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  margin-left: 0px;
+  position: absolute;
+  color: #000000;
+  text-align: center;
+  line-height: 64px;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  transition: -webkit-transform ease-out 200ms;
+  -webkit-transition: -webkit-transform ease-out 200ms;
+  -o-transition: transform ease-out 200ms;
+  transition: transform ease-out 200ms;
+  transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
+}
+
+.menu-open {
+  display: none;
+}
+
+.menuShare {
+  margin: auto;
+  position: fixed;
+  bottom: 10px;
+  right: 60px;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 28px;
+  z-index: 99;
+}
+
+.menuShare a.menu-item .fa {
+  color: black;
+}
+
+.menu-item:hover {
+  opacity: 1;
+}
+
+/* Если добавлять элемент, то увеличивать на +1 дочернюю  */
+
+.menu-item:nth-child(3) {
+  -webkit-transition-duration: 180ms;
+       -o-transition-duration: 180ms;
+          transition-duration: 180ms;
+}
+
+.menu-item:nth-child(4) {
+  -webkit-transition-duration: 180ms;
+       -o-transition-duration: 180ms;
+          transition-duration: 180ms;
+}
+
+.menu-open-button {
+  z-index: 2;
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+       -o-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transition-duration: 400ms;
+       -o-transition-duration: 400ms;
+          transition-duration: 400ms;
+  -webkit-transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+          transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 3px 1px black;
+          box-shadow: 0 0 3px 1px black;
+}
+
+.menu-open-button:hover {
+  -webkit-transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+          transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+}
+
+.menu-open:checked + .menu-open-button {
+  -webkit-transition-timing-function: linear;
+       -o-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition-duration: 200ms;
+       -o-transition-duration: 200ms;
+          transition-duration: 200ms;
+  -webkit-transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+          transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+}
+
+.menu-open:checked ~ .menu-item {
+  -webkit-transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+       -o-transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+          transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+}
+
+/* Если добавлять элемент, то увеличивать на +1 дочернюю и арифметически высчитать расстояние второго значения в пикселях  */
+
+.menu-open:checked ~ .menu-item:nth-child(3) {
+  -webkit-transition-duration: 180ms;
+       -o-transition-duration: 180ms;
+          transition-duration: 180ms;
+  -webkit-transform: translate3d(0.08361px, -84.99997px, 0);
+          transform: translate3d(0.08361px, -84.99997px, 0);
+}
+
+.menu-open:checked ~ .menu-item:nth-child(4) {
+  -webkit-transition-duration: 280ms;
+       -o-transition-duration: 280ms;
+          transition-duration: 280ms;
+  -webkit-transform: translate3d(0.08361px, -174.99997px, 0);
+          transform: translate3d(0.08361px, -174.99997px, 0);
+}
+
+/*phone*/
+
+.phone_share_btn {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 3px 1px black;
+          box-shadow: 0 0 3px 1px black;
+}
+
+.phone_share_btn .icon {
+  font-size: 24px;
+  margin-bottom: 3px;
+}
+
+.phone_share_btn:hover {
+  color: #000000;
+  text-shadow: none;
+}
+
+.whatsapp_share_btn {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 3px 1px black;
+          box-shadow: 0 0 3px 1px black;
+}
+
+.whatsapp_share_btn .icon {
+  font-size: 32px;
+}
+
+.whatsapp_share_btn:hover {
+  color: #000;
+  text-shadow: none;
+}
+
+/*end social share button*/
 
 @media (max-width: 1600px) {
   #magnify {
@@ -2371,6 +2530,12 @@ body a {
   .firsprogect__content-item .grid8 {
     grid-area: grid8;
     margin-top: -120px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .menuShare {
+    right: 30px;
   }
 }
 

@@ -23,19 +23,19 @@
         <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active" data-interval="2000">
-                    <picture><source srcset="/app/templates/img/mainslider/1.webp" type="image/webp"><img src="/app/templates/img/mainslider/1.png"  alt="..."></picture>
+                    <picture><source srcset="/app/templates/img/mainslider/11.webp" type="image/webp"><img src="/app/templates/img/mainslider/11.png"  alt="..."></picture>
                 </div>
                 <div class="carousel-item" data-interval="2000">
-                    <picture><source srcset="/app/templates/img/mainslider/2.webp" type="image/webp"><img src="/app/templates/img/mainslider/2.png"  alt="..."></picture>
+                    <picture><source srcset="/app/templates/img/mainslider/12.webp" type="image/webp"><img src="/app/templates/img/mainslider/12.png"  alt="..."></picture>
                 </div>
                 <div class="carousel-item" data-interval="2000">
-                    <picture><source srcset="/app/templates/img/mainslider/3.webp" type="image/webp"><img src="/app/templates/img/mainslider/3.jpg"  alt="..."></picture>
+                    <picture><source srcset="/app/templates/img/mainslider/13.webp" type="image/webp"><img src="/app/templates/img/mainslider/13.png"  alt="..."></picture>
                 </div>
                 <div class="carousel-item" data-interval="2000">
-                    <picture><source srcset="/app/templates/img/mainslider/4.webp" type="image/webp"><img src="/app/templates/img/mainslider/4.jpg"  alt="..."></picture>
+                    <picture><source srcset="/app/templates/img/mainslider/14.webp" type="image/webp"><img src="/app/templates/img/mainslider/14.png"  alt="..."></picture>
                 </div>
                 <div class="carousel-item" data-interval="2000">
-                    <picture><source srcset="/app/templates/img/mainslider/5.webp" type="image/webp"><img src="/app/templates/img/mainslider/5.jpg"  alt="..."></picture>
+                    <picture><source srcset="/app/templates/img/mainslider/15.webp" type="image/webp"><img src="/app/templates/img/mainslider/15.png"  alt="..."></picture>
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
@@ -77,31 +77,31 @@
             <div class="bar">
                 <div class="slider">
                     <div class="slider__item">
-                        <picture><source srcset="/app/templates/img/slider/1.svg" type="image/webp"><img src="/app/templates/img/slider/1.svg" alt=""></picture>
+                        <picture><source srcset="/app/templates/img/slider/1.webp" type="image/webp"><img src="/app/templates/img/slider/1.jpg" alt=""></picture>
                     </div>
                     <div class="slider__item">
-                        <picture><source srcset="/app/templates/img/slider/2.svg" type="image/webp"><img src="/app/templates/img/slider/2.svg" alt=""></picture>
+                        <picture><source srcset="/app/templates/img/slider/2.webp" type="image/webp"><img src="/app/templates/img/slider/2.jpg" alt=""></picture>
                     </div>
                     <div class="slider__item">
-                        <picture><source srcset="/app/templates/img/slider/3.svg" type="image/webp"><img src="/app/templates/img/slider/3.svg" alt=""></picture>
+                        <picture><source srcset="/app/templates/img/slider/3.webp" type="image/webp"><img src="/app/templates/img/slider/3.jpg" alt=""></picture>
                     </div>
                     <div class="slider__item">
-                        <picture><source srcset="/app/templates/img/slider/4.svg" type="image/webp"><img src="/app/templates/img/slider/4.svg" alt=""></picture>
+                        <picture><source srcset="/app/templates/img/slider/4.webp" type="image/webp"><img src="/app/templates/img/slider/4.jpg" alt=""></picture>
                     </div>
                     <div class="slider__item">
-                        <picture><source srcset="/app/templates/img/slider/5.svg" type="image/webp"><img src="/app/templates/img/slider/5.svg" alt=""></picture>
+                        <picture><source srcset="/app/templates/img/slider/5.webp" type="image/webp"><img src="/app/templates/img/slider/5.jpg" alt=""></picture>
                     </div>
                     <div class="slider__item">
-                        <picture><source srcset="/app/templates/img/slider/6.svg" type="image/webp"><img src="/app/templates/img/slider/6.svg" alt=""></picture>
+                        <picture><source srcset="/app/templates/img/slider/6.webp" type="image/webp"><img src="/app/templates/img/slider/6.jpg" alt=""></picture>
                     </div>
                     <div class="slider__item">
-                        <picture><source srcset="/app/templates/img/slider/7.svg" type="image/webp"><img src="/app/templates/img/slider/7.svg" alt=""></picture>
+                        <picture><source srcset="/app/templates/img/slider/7.webp" type="image/webp"><img src="/app/templates/img/slider/7.jpg" alt=""></picture>
                     </div>
                     <div class="slider__item">
-                        <picture><source srcset="/app/templates/img/slider/8.svg" type="image/webp"><img src="/app/templates/img/slider/8.svg" alt=""></picture>
+                        <picture><source srcset="/app/templates/img/slider/8.webp" type="image/webp"><img src="/app/templates/img/slider/8.jpg" alt=""></picture>
                     </div>
                     <div class="slider__item">
-                        <picture><source srcset="/app/templates/img/slider/9.svg" type="image/webp"><img src="/app/templates/img/slider/9.svg" alt=""></picture>
+                        <picture><source srcset="/app/templates/img/slider/9.webp" type="image/webp"><img src="/app/templates/img/slider/9.jpg" alt=""></picture>
                     </div>
                 </div>
             </div>
