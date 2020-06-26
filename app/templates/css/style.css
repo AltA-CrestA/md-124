@@ -1812,6 +1812,12 @@ body a {
           transition-duration: 180ms;
 }
 
+.menu-item:nth-child(5) {
+  -webkit-transition-duration: 180ms;
+       -o-transition-duration: 180ms;
+          transition-duration: 180ms;
+}
+
 .menu-open-button {
   z-index: 2;
   -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -1867,17 +1873,20 @@ body a {
           transform: translate3d(0.08361px, -174.99997px, 0);
 }
 
+.menu-open:checked ~ .menu-item:nth-child(5) {
+  -webkit-transition-duration: 380ms;
+       -o-transition-duration: 380ms;
+          transition-duration: 380ms;
+  -webkit-transform: translate3d(0.08361px, -264.99997px, 0);
+          transform: translate3d(0.08361px, -264.99997px, 0);
+}
+
 /*phone*/
 
 .phone_share_btn {
   background-color: #ffffff;
   -webkit-box-shadow: 0 0 3px 1px black;
           box-shadow: 0 0 3px 1px black;
-}
-
-.phone_share_btn .icon {
-  font-size: 24px;
-  margin-bottom: 3px;
 }
 
 .phone_share_btn:hover {
@@ -1891,8 +1900,9 @@ body a {
           box-shadow: 0 0 3px 1px black;
 }
 
-.whatsapp_share_btn .icon {
-  font-size: 32px;
+.phone__icon {
+  font-size: 22px;
+  margin-bottom: 2px;
 }
 
 .whatsapp_share_btn:hover {
