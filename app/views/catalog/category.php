@@ -38,16 +38,16 @@
                         <?php if ($categoriesId['url'] == 'kitchen'): ?>
                             <?php foreach ($categoryProjectsKitchen as $kitchen): ?>
                                 <div class="room__box-image">
-                                    <a href="/projects/kitchen/1">
-                                        <img src="/app/templates/img/download/<?php echo $kitchen['image']; ?>" alt="">
+                                    <a href="/projects/kitchen/<?php echo $kitchen['id']; ?>">
+                                        <img src="/app/templates/img/kitchen/<?php echo $kitchen['image']; ?>" alt="">
                                     </a>
                                 </div>
                             <?php endforeach; ?>
                         <?php elseif ($categoriesId['url'] == 'bathroom'): ?>
                             <?php foreach ($categoryProjectsBathroom as $bathroom): ?>
                                 <div class="room__box-image">
-                                    <a href="/projects/kitchen/2">
-                                        <img src="/app/templates/img/download/<?php echo $bathroom['image']; ?>" alt="">
+                                    <a href="/projects/kitchen/<?php echo $bathroom['id']; ?>">
+                                        <img src="/app/templates/img/bathroom/<?php echo $bathroom['image']; ?>" alt="">
                                     </a>
                                 </div>
                             <?php endforeach; ?>
@@ -55,7 +55,7 @@
                             <?php foreach ($categoryProjectsCloset as $closet): ?>
                                 <div class="room__box-image">
                                     <a href="/projects/kitchen/3">
-                                        <img src="/app/templates/img/download/<?php echo $closet['image']; ?>" alt="">
+                                        <img src="/app/templates/img/closet/<?php echo $closet['image']; ?>" alt="">
                                     </a>
                                 </div>
                             <?php endforeach; ?>
@@ -79,7 +79,7 @@
                             <?php foreach ($categoryProjectsCloset as $closet): ?>
                                 <div class="room__box-image">
                                     <a href="/projects/kitchen/3">
-                                        <img src="/app/templates/img/download/<?php echo $closet['image']; ?>" alt="">
+                                        <img src="/app/templates/img/closet/<?php echo $closet['image']; ?>" alt="">
                                     </a>
                                 </div>
                             <?php endforeach; ?>
