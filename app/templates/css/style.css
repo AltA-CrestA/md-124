@@ -1744,7 +1744,7 @@ body a {
 }
 
 .wrapper a {
-  opacity: 0.8;
+  opacity: 1;
   -webkit-transition: all 0.8s;
   -o-transition: all 0.8s;
   transition: all 0.8s;
@@ -1794,10 +1794,6 @@ body a {
   color: black;
 }
 
-.menu-item:hover {
-  opacity: 1;
-}
-
 /* Если добавлять элемент, то увеличивать на +1 дочернюю  */
 
 .menu-item:nth-child(3) {
@@ -1829,13 +1825,20 @@ body a {
   -webkit-transform: scale(1.1, 1.1) translate3d(0, 0, 0);
           transform: scale(1.1, 1.1) translate3d(0, 0, 0);
   cursor: pointer;
-  -webkit-box-shadow: 0 0 3px 1px black;
-          box-shadow: 0 0 3px 1px black;
+  -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 .menu-open-button:hover {
   -webkit-transform: scale(1.2, 1.2) translate3d(0, 0, 0);
           transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+}
+
+.menu-open-button img {
+  -webkit-transform: scale(0.4);
+      -ms-transform: scale(0.4);
+          transform: scale(0.4);
+  width: 100%;
 }
 
 .menu-open:checked + .menu-open-button {
@@ -1884,9 +1887,17 @@ body a {
 /*phone*/
 
 .phone_share_btn {
-  background-color: #ffffff;
-  -webkit-box-shadow: 0 0 3px 1px black;
-          box-shadow: 0 0 3px 1px black;
+  background-color: #000000;
+  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.phone_share_btn img {
+  padding-top: 2px;
+  -webkit-transform: scale(0.46);
+      -ms-transform: scale(0.46);
+          transform: scale(0.46);
+  width: 100%;
 }
 
 .phone_share_btn:hover {
@@ -1895,18 +1906,14 @@ body a {
 }
 
 .whatsapp_share_btn {
-  background-color: #ffffff;
-  -webkit-box-shadow: 0 0 3px 1px black;
-          box-shadow: 0 0 3px 1px black;
-}
-
-.phone__icon {
-  font-size: 22px;
-  margin-bottom: 2px;
+  background-color: #000000;
+  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
+  color: white;
 }
 
 .whatsapp_share_btn:hover {
-  color: #000;
+  color: white;
   text-shadow: none;
 }
 

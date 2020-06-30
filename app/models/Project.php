@@ -5,6 +5,7 @@ namespace md124\models;
 
 
 use md124\components\Db;
+use PDO;
 
 class Project
 {
@@ -172,7 +173,6 @@ class Project
         $i = 0;
         while ($row = $result->fetch()) {
             $projects[$i]['id'] = $row['id'];
-            $projects[$i]['name'] = $row['name'];
             $projects[$i]['image'] = $row['image'];
             $i++;
         }
@@ -192,6 +192,161 @@ class Project
 
         mail($mail_to, $subject, $result, $headers);
 
+    }
+
+    public static function getKitchenProjectById($projectId)
+    {
+
+        $db = Db::getConnection();
+
+        $sql = "SELECT * FROM kitchen WHERE id = '$projectId'";
+        $result = $db->query($sql);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+
+        return $result->fetch();
+
+    }
+
+    public static function getBathroomProjectById($projectId)
+    {
+
+        $db = Db::getConnection();
+
+        $sql = "SELECT * FROM bathroom WHERE id = '$projectId'";
+        $result = $db->query($sql);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+
+        return $result->fetch();
+
+    }
+
+    public static function getClosetProjectById($projectId)
+    {
+
+        $db = Db::getConnection();
+
+        $sql = "SELECT * FROM closet WHERE id = '$projectId'";
+        $result = $db->query($sql);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+
+        return $result->fetch();
+
+    }
+
+    public static function getHallProjectById($projectId)
+    {
+
+        $db = Db::getConnection();
+
+        $sql = "SELECT * FROM hall WHERE id = '$projectId'";
+        $result = $db->query($sql);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+
+        return $result->fetch();
+
+    }
+
+    public static function getBedroomProjectById($projectId)
+    {
+
+        $db = Db::getConnection();
+
+        $sql = "SELECT * FROM bedroom WHERE id = '$projectId'";
+        $result = $db->query($sql);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+
+        return $result->fetch();
+
+    }
+
+    public static function getLoungeProjectById($projectId)
+    {
+
+        $db = Db::getConnection();
+
+        $sql = "SELECT * FROM lounge WHERE id = '$projectId'";
+        $result = $db->query($sql);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+
+        return $result->fetch();
+
+    }
+
+    public static function getChildrenProjectById($projectId)
+    {
+
+        $db = Db::getConnection();
+
+        $sql = "SELECT * FROM children WHERE id = '$projectId'";
+        $result = $db->query($sql);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+
+        return $result->fetch();
+
+    }
+
+    public static function getCore($project)
+    {
+        if ($project['core'] == null) {
+            return '—';
+        }
+        return $project['core'];
+    }
+
+    public static function getFacade($project)
+    {
+        if ($project['facade'] == null) {
+            return '—';
+        }
+        return $project['facade'];
+    }
+
+    public static function getFurniture($project)
+    {
+        if ($project['furniture'] == null) {
+            return '—';
+        }
+        return $project['furniture'];
+    }
+
+    public static function getTabletop($project)
+    {
+        if ($project['tabletop'] == null) {
+            return '—';
+        }
+        return $project['tabletop'];
+    }
+
+    public static function getHandles($project)
+    {
+        if ($project['handles'] == null) {
+            return '—';
+        }
+        return $project['handles'];
+    }
+
+    public static function getWashing($project)
+    {
+        if ($project['washing'] == null) {
+            return '—';
+        }
+        return $project['washing'];
+    }
+
+    public static function getBacklight($project)
+    {
+        if ($project['backlight'] == null) {
+            return '—';
+        }
+        return $project['backlight'];
+    }
+
+    public static function getProp($project)
+    {
+        if ($project['prop'] == null) {
+            return '—';
+        }
+        return $project['prop'];
     }
 
 }

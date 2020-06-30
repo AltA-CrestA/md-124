@@ -48,10 +48,47 @@ class CatalogController
         return true;
     }
 
-    public function actionProject()
+    public function actionProjectView($categoryUrl, $projectId)
     {
 
-        require_once ROOT . '/app/views/catalog/project.php';
+        if ($categoryUrl == 'kitchen') {
+            $project = Project::getKitchenProjectById($projectId);
+
+            require_once ROOT . '/app/views/catalog/project.php';
+
+        } elseif ($categoryUrl == 'bathroom') {
+            $project = Project::getBathroomProjectById($projectId);
+
+            require_once ROOT . '/app/views/catalog/project.php';
+
+        } elseif ($categoryUrl == 'closet' || $categoryUrl == 'wardrobe') {
+            $project = Project::getClosetProjectById($projectId);
+
+            require_once ROOT . '/app/views/catalog/project.php';
+
+        } elseif ($categoryUrl == 'hall') {
+            $project = Project::getHallProjectById($projectId);
+
+            require_once ROOT . '/app/views/catalog/project.php';
+
+        } elseif ($categoryUrl == 'bedroom') {
+            $project = Project::getBedroomProjectById($projectId);
+
+            require_once ROOT . '/app/views/catalog/project.php';
+
+        } elseif ($categoryUrl == 'lounge') {
+            $project = Project::getLoungeProjectById($projectId);
+
+            require_once ROOT . '/app/views/catalog/project.php';
+
+        } elseif ($categoryUrl == 'children') {
+            $project = Project::getChildrenProjectById($projectId);
+
+            require_once ROOT . '/app/views/catalog/project.php';
+
+        }
+
+        require_once ROOT . '/app/views/site/404.php';
 
         return true;
 

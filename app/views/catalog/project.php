@@ -8,31 +8,161 @@
     <title>Item</title>
 </head>
 <body>
-<?php include ROOT . '/app/views/layouts/headerW.php'; ?>
+<?php use md124\models\Project;
+
+include ROOT . '/app/views/layouts/headerW.php'; ?>
 <main class="wrapper">
 
-    <section class="product">
-        <div class="product__content">
-            <div class="product__content-image">
-                <img src="/app/templates/img/download/kitchen/1.png" alt="" class="minimized">
-            </div>
-            <div class="product__content-text">
-                <h2>Наименование</h2>
-                <ul>
-                    <li><span>Корпус:</span> Lorem ipsum dolor sit amet.</li>
-                    <li><span>Фасад:</span> Lorem ipsum dolor.</li>
-                    <li><span>Фурнитура:</span> Lorem ipsum dolor sit amet, consectetur.</li>
-                    <li><span>Столешница:</span> Lorem ipsum.</li>
-                    <li><span>Ручки:</span> Lorem ipsum dolor.</li>
-                    <li><span>Мойка:</span> Lorem ipsum.</li>
-                    <li><span>Подсветка:</span> Lorem ipsum dolor.</li>
-                    <li><span>А так же:</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem deleniti earum id officiis tenetur! Ea eligendi eum impedit, necessitatibus provident quae quaerat quasi reprehenderit voluptate?</li>
-                </ul>
-                <div class="product__content-text-btn">
-                    <a href="#popup" class="popup-link">Узнать стоимость</a>
+    <?php if ($categoryUrl == 'kitchen'): ?>
+        <section class="product">
+            <div class="product__content">
+                <div class="product__content-image">
+                    <img src="/app/templates/img/<?php echo $categoryUrl . '/' . $project['image']; ?>" alt="" class="">
+                </div>
+                <div class="product__content-text">
+                    <h2>Описание</h2>
+                    <ul>
+                        <li><span>Корпус:</span> <?php echo Project::getCore($project); ?></li>
+                        <li><span>Фасад:</span> <?php echo Project::getFacade($project); ?></li>
+                        <li><span>Фурнитура:</span> <?php echo Project::getFurniture($project); ?></li>
+                        <li><span>Столешница:</span> <?php echo Project::getTabletop($project); ?></li>
+                        <li><span>Ручки:</span> <?php echo Project::getHandles($project); ?></li>
+                        <li><span>Мойка:</span> <?php echo Project::getWashing($project); ?></li>
+                        <li><span>Подсветка:</span> <?php echo Project::getBacklight($project); ?></li>
+                    </ul>
+                    <div class="product__content-text-btn">
+                        <a href="#popup" class="popup-link">Узнать стоимость</a>
+                    </div>
                 </div>
             </div>
-    </section>
+        </section>
+    <?php elseif ($categoryUrl == 'bathroom'): ?>
+        <section class="product">
+            <div class="product__content">
+                <div class="product__content-image">
+                    <img src="/app/templates/img/<?php echo $categoryUrl . '/' . $project['image']; ?>" alt="" class="">
+                </div>
+                <div class="product__content-text">
+                    <h2>Описание</h2>
+                    <ul>
+                        <li><span>Корпус:</span> <?php echo Project::getCore($project); ?></li>
+                        <li><span>Фасад:</span> <?php echo Project::getFacade($project); ?></li>
+                        <li><span>Фурнитура:</span> <?php echo Project::getFurniture($project); ?></li>
+                        <li><span>Столешница:</span> <?php echo Project::getTabletop($project); ?></li>
+                        <li><span>Мойка:</span> <?php echo Project::getWashing($project) ?></li>
+                        <li><span>Подсветка:</span> <?php echo Project::getBacklight($project); ?></li>
+                    </ul>
+                    <div class="product__content-text-btn">
+                        <a href="#popup" class="popup-link">Узнать стоимость</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <?php elseif ($categoryUrl == 'closet' || $categoryUrl == 'wardrobe'): ?>
+        <section class="product">
+            <div class="product__content">
+                <div class="product__content-image">
+                    <img src="/app/templates/img/<?php echo 'closet/' . $project['image']; ?>" alt="" class="">
+                </div>
+                <div class="product__content-text">
+                    <h2>Описание</h2>
+                    <ul>
+                        <li><span>Корпус:</span> <?php echo Project::getCore($project); ?></li>
+                        <li><span>Фасад:</span> <?php echo Project::getFacade($project); ?></li>
+                        <li><span>Фурнитура:</span> <?php echo Project::getFurniture($project); ?></li>
+                    </ul>
+                    <div class="product__content-text-btn">
+                        <a href="#popup" class="popup-link">Узнать стоимость</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <?php elseif ($categoryUrl == 'hall'): ?>
+        <section class="product">
+            <div class="product__content">
+                <div class="product__content-image">
+                    <img src="/app/templates/img/<?php echo $categoryUrl . '/' . $project['image']; ?>" alt="" class="">
+                </div>
+                <div class="product__content-text">
+                    <h2>Описание</h2>
+                    <ul>
+                        <li><span>Корпус:</span> <?php echo Project::getCore($project); ?></li>
+                        <li><span>Фасад:</span> <?php echo Project::getFacade($project); ?></li>
+                        <li><span>Фурнитура:</span> <?php echo Project::getFurniture($project); ?></li>
+                        <li><span>Столешница:</span> <?php echo Project::getTabletop($project); ?></li>
+                        <li><span>Мойка:</span> <?php echo Project::getProp($project); ?></li>
+                        <li><span>Подсветка:</span> <?php echo Project::getBacklight($project); ?></li>
+                    </ul>
+                    <div class="product__content-text-btn">
+                        <a href="#popup" class="popup-link">Узнать стоимость</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <?php elseif ($categoryUrl == 'bedroom'): ?>
+        <section class="product">
+            <div class="product__content">
+                <div class="product__content-image">
+                    <img src="/app/templates/img/<?php echo $categoryUrl . '/' . $project['image']; ?>" alt="" class="">
+                </div>
+                <div class="product__content-text">
+                    <h2>Описание</h2>
+                    <ul>
+                        <li><span>Корпус:</span> <?php echo Project::getCore($project); ?></li>
+                        <li><span>Фасад:</span> <?php echo Project::getFacade($project); ?></li>
+                        <li><span>Фурнитура:</span> <?php echo Project::getFurniture($project); ?></li>
+                        <li><span>Столешница:</span> <?php echo Project::getTabletop($project); ?></li>
+                        <li><span>Подсветка:</span> <?php echo Project::getBacklight($project); ?></li>
+                    </ul>
+                    <div class="product__content-text-btn">
+                        <a href="#popup" class="popup-link">Узнать стоимость</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <?php elseif ($categoryUrl == 'lounge'): ?>
+        <section class="product">
+            <div class="product__content">
+                <div class="product__content-image">
+                    <img src="/app/templates/img/<?php echo $categoryUrl . '/' . $project['image']; ?>" alt="" class="">
+                </div>
+                <div class="product__content-text">
+                    <h2>Описание</h2>
+                    <ul>
+                        <li><span>Корпус:</span> <?php echo Project::getCore($project); ?></li>
+                        <li><span>Фасад:</span> <?php echo Project::getFacade($project); ?></li>
+                        <li><span>Фурнитура:</span> <?php echo Project::getFurniture($project); ?></li>
+                        <li><span>Столешница:</span> <?php echo Project::getTabletop($project); ?></li>
+                        <li><span>Подсветка:</span> <?php echo Project::getBacklight($project); ?></li>
+                    </ul>
+                    <div class="product__content-text-btn">
+                        <a href="#popup" class="popup-link">Узнать стоимость</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <?php elseif ($categoryUrl == 'children'): ?>
+        <section class="product">
+            <div class="product__content">
+                <div class="product__content-image">
+                    <img src="/app/templates/img/<?php echo $categoryUrl . '/' . $project['image']; ?>" alt="" class="">
+                </div>
+                <div class="product__content-text">
+                    <h2>Описание</h2>
+                    <ul>
+                        <li><span>Корпус:</span> <?php echo Project::getCore($project); ?></li>
+                        <li><span>Фасад:</span> <?php echo Project::getFacade($project); ?></li>
+                        <li><span>Фурнитура:</span> <?php echo Project::getFurniture($project); ?></li>
+                        <li><span>Столешница:</span> <?php echo Project::getTabletop($project); ?></li>
+                        <li><span>Подсветка:</span> <?php echo Project::getBacklight($project); ?></li>
+                    </ul>
+                    <div class="product__content-text-btn">
+                        <a href="#popup" class="popup-link">Узнать стоимость</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <?php endif; ?>
 
 </main>
 <?php include ROOT . '/app/views/layouts/footer.php'; ?>
