@@ -36,14 +36,18 @@
                     </ul>
                 </div>
                 <div class="footer__content__info-contact-right">
-                    <h3>Контактная информация</h3>
-                    <ul>
-                        <li><a href="tel:+79832693953">+7 983 269-39-53</a></li>
-                        <li><a href="mailto:md_124@mail.ru">md_124@mail.ru</a></li>
-                        <li class="address">Красноярск ул. Шахтеров 65 <br> ТЦ КОНТИНЕНТ, 2 этаж</li>
-                        <li>Ежедневно с 10:00-20:00</li>
-                    </ul>
-                </div>
+					<h3>Контакты</h3>
+					<div class="phone__footer">
+							<a href="tel:+79832693953">+7 983 269-39-53</a>
+							<a href="tel:+79832722300">+7 983 272-23-00</a>
+							<a href="tel:+79832886606">+7 983 288-66-06</a>
+					</div>
+					<ul>
+						<li><a href="mailto:md_124@mail.ru">md_124@mail.ru</a></li>
+						<li class="address">Красноярск ул. Шахтеров 65 <br> ТЦ КОНТИНЕНТ, 2 этаж</li>
+						<li>Ежедневно с 10:00-20:00</li>
+					</ul>
+				</div>
             </div>
         </div>
     </div>

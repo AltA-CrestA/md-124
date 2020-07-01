@@ -30,7 +30,7 @@
                             </a>
                         </div>
                         <div class="review__content-item-box-link-button">
-                            <a href="https://vk.com/topic-102385863_34820032">Читать все все отзывы</a>
+                            <a href="https://vk.com/topic-102385863_34820032">Читать все отзывы</a>
                         </div>
                     </div>
                 </div>
@@ -49,7 +49,7 @@
                             </a>
                         </div>
                         <div class="review__content-item-box-link-button">
-                            <a href="https://vk.com/topic-102385863_34820032">Читать все все отзывы</a>
+                            <a href="https://vk.com/topic-102385863_34820032">Читать все отзывы</a>
                         </div>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                             </a>
                         </div>
                         <div class="review__content-item-box-link-button">
-                            <a href="https://vk.com/topic-102385863_34820032">Читать все все отзывы</a>
+                            <a href="https://vk.com/topic-102385863_34820032">Читать все отзывы</a>
                         </div>
                     </div>
                 </div>
@@ -96,7 +96,7 @@
                             </a>
                         </div>
                         <div class="review__content-item-box-link-button">
-                            <a href="https://vk.com/topic-102385863_34820032">Читать все все отзывы</a>
+                            <a href="https://vk.com/topic-102385863_34820032">Читать все отзывы</a>
                         </div>
                     </div>
                 </div>
@@ -116,7 +116,7 @@
                             </a>
                         </div>
                         <div class="review__content-item-box-link-button">
-                            <a href="https://vk.com/topic-102385863_34820032">Читать все все отзывы</a>
+                            <a href="https://vk.com/topic-102385863_34820032">Читать все отзывы</a>
                         </div>
                     </div>
                 </div>
@@ -138,7 +138,7 @@
                             </a>
                         </div>
                         <div class="review__content-item-box-link-button">
-                            <a href="https://vk.com/topic-102385863_34820032">Читать все все отзывы</a>
+                            <a href="https://vk.com/topic-102385863_34820032">Читать все отзывы</a>
                         </div>
                     </div>
                 </div>
@@ -158,7 +158,7 @@
                             </a>
                         </div>
                         <div class="review__content-item-box-link-button">
-                            <a href="https://vk.com/topic-102385863_34820032">Читать все все отзывы</a>
+                            <a href="https://vk.com/topic-102385863_34820032">Читать все отзывы</a>
                         </div>
                     </div>
                 </div>
@@ -178,7 +178,7 @@
                             </a>
                         </div>
                         <div class="review__content-item-box-link-button">
-                            <a href="https://vk.com/topic-102385863_34820032">Читать все все отзывы</a>
+                            <a href="https://vk.com/topic-102385863_34820032">Читать все отзывы</a>
                         </div>
                     </div>
                 </div>
