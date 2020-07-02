@@ -799,9 +799,13 @@ header .header__content-phone a:hover {
   width: 50%;
 }
 
+.product__content-image img {
+  width: 100%;
+}
+
 .product__content-text {
   width: 50%;
-  padding: 20px 0px;
+  padding: 20px 0px 20px 50px;
   color: black;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -900,7 +904,7 @@ header .header__content-phone a:hover {
 }
 
 .catalogSection__content-button a {
-  color: black;
+  color: white;
   border: 2px solid black;
   border-radius: 40px;
   padding: 15px 30px;
@@ -912,11 +916,12 @@ header .header__content-phone a:hover {
   -webkit-transition: 0.2s all;
   -o-transition: 0.2s all;
   transition: 0.2s all;
+  background-color: black;
 }
 
 .catalogSection__content-button a:hover {
-  color: white;
-  background-color: black;
+  color: black;
+  background-color: white;
 }
 
 footer {
@@ -1081,8 +1086,35 @@ footer .footer__content__info-contact-right h3 {
   font-weight: 400;
 }
 
+footer .footer__content__info-contact-right .phone__footer {
+  padding-top: 23px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .footer__content__info-contact-right .phone__footer a {
+  margin-top: 10px;
+  text-decoration: none;
+  font-size: calc(12px + 4 * ((100vw - 320px) / 1600));
+  font-weight: 200;
+  -webkit-transition: 0.2s all;
+  -o-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+footer .footer__content__info-contact-right .phone__footer a:hover {
+  text-decoration: none;
+  color: white;
+  text-shadow: 0 0 3px #fff, 0 0 3px #fff;
+}
+
 footer .footer__content__info-contact-right ul {
-  padding-top: 48px;
+  padding-top: 33px;
 }
 
 footer .footer__content__info-contact-right ul li {
@@ -2011,20 +2043,11 @@ body a {
 
 @media (max-width: 976px) {
   header .header__content .header__content-logo img {
-    max-width: 80%;
+    max-width: 100%;
   }
 
   header .header__content .header__content__menu {
     padding-right: 0vw;
-  }
-
-  header .header__content-logo {
-    width: 100%;
-    height: 100%;
-  }
-
-  header .header__content-logo img {
-    width: 100%;
   }
 
   header .header__content-menu {
@@ -2230,6 +2253,7 @@ body a {
 
   .product .product__content-text {
     width: 100%;
+    padding: 20px 10px 20px 10px;
   }
 
   .product .product__content-text-btn {
@@ -2496,6 +2520,10 @@ body a {
 
   footer .footer__content__info-contact-right {
     padding-top: 32px;
+  }
+
+  footer .footer__content__info-contact-right .phone__footer {
+    padding-top: 0px;
   }
 
   footer .footer__content__info-contact-right ul {
