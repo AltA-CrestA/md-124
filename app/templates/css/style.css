@@ -613,8 +613,7 @@ header .header__content-phone a:hover {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 3em;
   grid-template-rows: auto;
-  grid-template-areas:
-    "grid1 grid2 grid3"
+  grid-template-areas: "grid1 grid2 grid3"
     "grid4 grid5 grid6"
     "grid7 grid7 grid8";
 }
@@ -928,7 +927,7 @@ header .header__content-phone a:hover {
 }
 
 .footer {
-  background: url("../img/footer.png") no-repeat center center fixed;
+  background: url("../img/footer.png") no-repeat center center;
   background-size: cover;
   position: relative;
   z-index: -2;
@@ -941,7 +940,7 @@ header .header__content-phone a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5);
   z-index: -1;
 }
 
@@ -2032,6 +2031,18 @@ body a {
     padding-right: 0;
   }
 
+  .footer .footer__content__icon-icons .icon__link .inst {
+    padding: 8px 11px;
+  }
+
+  .footer .footer__content__icon-icons .icon__link .vk {
+    padding: 8px 9px;
+  }
+
+  .footer .footer__content__icon-icons .icon__link .wats {
+    padding: 8px 11px;
+  }
+
   .footer .footer__content__info {
     width: 100%;
     padding: 0 20px 0 20px;
@@ -2226,8 +2237,7 @@ body a {
     grid-gap: 2em;
     grid-template-rows: auto;
     text-align: center;
-    grid-template-areas:
-      "grid1 grid2"
+    grid-template-areas: "grid1 grid2"
       "grid3 grid4"
       "grid5 grid6"
       "grid7 grid8";
@@ -2657,6 +2667,6 @@ body a {
 }
 
 .webp .footer {
-  background: url(../img/footer.webp) no-repeat center center fixed;
+  background: url(../img/footer.webp) no-repeat center center;
   background-size: cover;
 }
