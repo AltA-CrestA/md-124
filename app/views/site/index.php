@@ -6,7 +6,7 @@
     <script src="https://kit.fontawesome.com/a92d3a3d23.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="/app/templates/plugins/animate/animate.min.css">
-    <link rel="stylesheet" href="/app/templates/css/style.min.css">
+    <link rel="stylesheet" href="/app/templates/css/style.css">
     <title>Главная &mdash; Мастерская Дизайна</title>
 </head>
 <body>
