@@ -13,7 +13,6 @@ session_start();
 
 define('ROOT', dirname(__FILE__));
 require_once ROOT . '/vendor/autoload.php';
-//require_once ROOT . '/app/components/Router.php';
 
 // 3. Вызор Router
 

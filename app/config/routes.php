@@ -9,5 +9,6 @@ return array(
     'reviews' => 'site/review', // actionReview в SiteController
     'contacts/ajax' => 'site/form', // actionForm в SiteController
     'contacts' => 'site/contact', // actionContact в SiteController
+    '[?]yclid=([0-9]+)' => 'site/index', // Для Яндекс Direct
     '^/*$' => 'site/index', // actionIndex в SiteController
 );
