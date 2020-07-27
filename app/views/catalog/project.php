@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a92d3a3d23.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/app/templates/css/style.min.css">
-    <title>Item</title>
+    <title>Проект — Мастерская Дизайна</title>
 </head>
 <body>
 <?php use md124\models\Project;
@@ -18,36 +18,44 @@ include ROOT . '/app/views/layouts/headerW.php'; ?>
             <div class="product__content">
                 <div class="product__content-image">
 
-                    <div class="popularItem__content-slider">
-                    <div class="popularItem__content-slider-buttons">
-                        <button class="popularItem__content-slider-buttons-prev">
-                            <img src="../../img/left.svg" alt="" />
-                        </button>
-                        <button class="popularItem__content-slider-buttons-next">
-                            <img src="../../img/right.svg" alt="" />
-                        </button>
-			        </div>
-                    <div class="popularItem__content-slider-track">
-                        <div class="popularItem__content-slider-track-item">
-                                <img src="../../img/download/kitchen/1.jpg" alt="" class="minimized">
+                    <?php if (empty($project['image-1'])): ?>
+                        <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image']; ?>" alt="" class="">
+
+                    <?php else: ?>
+
+                        <div class="popularItem__content-slider">
+                            <div class="popularItem__content-slider-buttons">
+                                <button class="popularItem__content-slider-buttons-prev">
+                                    <img src="/app/templates/img/left.svg" alt="" />
+                                </button>
+                                <button class="popularItem__content-slider-buttons-next">
+                                    <img src="/app/templates/img/right.svg" alt="" />
+                                </button>
+                            </div>
+                            <div class="popularItem__content-slider-track">
+                                <div class="popularItem__content-slider-track-item">
+                                    <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image']; ?>" alt="" class="minimized">
+                                </div>
+                                <div class="popularItem__content-slider-track-item">
+                                    <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image-1']; ?>" alt="" class="minimized">
+                                </div>
+
+                                <?php if (!empty($project['image-2'])): ?>
+                                <div class="popularItem__content-slider-track-item">
+                                    <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image-2']; ?>" alt="" class="minimized">
+                                </div>
+                                <?php endif; ?>
+
+                                <?php if (!empty($project['image-3'])): ?>
+                                    <div class="popularItem__content-slider-track-item">
+                                        <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image-3']; ?>" alt="" class="minimized">
+                                    </div>
+                                <?php endif; ?>
+
+                            </div>
                         </div>
-                        <div class="popularItem__content-slider-track-item">
-                                <img src="../../img/download/kitchen/1.jpg" alt="" class="minimized">
-                        </div>
-                        <div class="popularItem__content-slider-track-item">
-                                <img src="../../img/download/kitchen/1.jpg" alt="" class="minimized">
-                        </div>
-                        <div class="popularItem__content-slider-track-item">
-                                <img src="../../img/download/kitchen/1.jpg" alt="" class="minimized">
-                        </div>
-                        <div class="popularItem__content-slider-track-item">
-                                <img src="../../img/download/kitchen/1.jpg" alt="" class="minimized">
-                        </div>
-                        <div class="popularItem__content-slider-track-item">
-                                <img src="../../img/download/kitchen/1.jpg" alt="" class="minimized">
-                        </div>
-                    </div>
-                    </div>
+                    <?php endif; ?>
+
                 </div>
                 <div class="product__content-text">
                     <h2>Описание</h2>
@@ -70,7 +78,45 @@ include ROOT . '/app/views/layouts/headerW.php'; ?>
         <section class="product">
             <div class="product__content">
                 <div class="product__content-image">
-                    <img src="/app/templates/img/<?php echo $categoryUrl . '/' . $project['image']; ?>" alt="" class="">
+
+                    <?php if (empty($project['image-1'])): ?>
+                        <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image']; ?>" alt="" class="">
+
+                    <?php else: ?>
+
+                        <div class="popularItem__content-slider">
+                            <div class="popularItem__content-slider-buttons">
+                                <button class="popularItem__content-slider-buttons-prev">
+                                    <img src="/app/templates/img/left.svg" alt="" />
+                                </button>
+                                <button class="popularItem__content-slider-buttons-next">
+                                    <img src="/app/templates/img/right.svg" alt="" />
+                                </button>
+                            </div>
+                            <div class="popularItem__content-slider-track">
+                                <div class="popularItem__content-slider-track-item">
+                                    <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image']; ?>" alt="" class="minimized">
+                                </div>
+                                <div class="popularItem__content-slider-track-item">
+                                    <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image-1']; ?>" alt="" class="minimized">
+                                </div>
+
+                                <?php if (!empty($project['image-2'])): ?>
+                                    <div class="popularItem__content-slider-track-item">
+                                        <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image-2']; ?>" alt="" class="minimized">
+                                    </div>
+                                <?php endif; ?>
+
+                                <?php if (!empty($project['image-3'])): ?>
+                                    <div class="popularItem__content-slider-track-item">
+                                        <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image-3']; ?>" alt="" class="minimized">
+                                    </div>
+                                <?php endif; ?>
+
+                            </div>
+                        </div>
+                    <?php endif; ?>
+
                 </div>
                 <div class="product__content-text">
                     <h2>Описание</h2>
@@ -92,7 +138,45 @@ include ROOT . '/app/views/layouts/headerW.php'; ?>
         <section class="product">
             <div class="product__content">
                 <div class="product__content-image">
-                    <img src="/app/templates/img/<?php echo 'closet/' . $project['image']; ?>" alt="" class="">
+
+                    <?php if (empty($project['image-1'])): ?>
+                        <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image']; ?>" alt="" class="">
+
+                    <?php else: ?>
+
+                        <div class="popularItem__content-slider">
+                            <div class="popularItem__content-slider-buttons">
+                                <button class="popularItem__content-slider-buttons-prev">
+                                    <img src="/app/templates/img/left.svg" alt="" />
+                                </button>
+                                <button class="popularItem__content-slider-buttons-next">
+                                    <img src="/app/templates/img/right.svg" alt="" />
+                                </button>
+                            </div>
+                            <div class="popularItem__content-slider-track">
+                                <div class="popularItem__content-slider-track-item">
+                                    <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image']; ?>" alt="" class="minimized">
+                                </div>
+                                <div class="popularItem__content-slider-track-item">
+                                    <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image-1']; ?>" alt="" class="minimized">
+                                </div>
+
+                                <?php if (!empty($project['image-2'])): ?>
+                                    <div class="popularItem__content-slider-track-item">
+                                        <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image-2']; ?>" alt="" class="minimized">
+                                    </div>
+                                <?php endif; ?>
+
+                                <?php if (!empty($project['image-3'])): ?>
+                                    <div class="popularItem__content-slider-track-item">
+                                        <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image-3']; ?>" alt="" class="minimized">
+                                    </div>
+                                <?php endif; ?>
+
+                            </div>
+                        </div>
+                    <?php endif; ?>
+
                 </div>
                 <div class="product__content-text">
                     <h2>Описание</h2>
@@ -111,7 +195,45 @@ include ROOT . '/app/views/layouts/headerW.php'; ?>
         <section class="product">
             <div class="product__content">
                 <div class="product__content-image">
-                    <img src="/app/templates/img/<?php echo $categoryUrl . '/' . $project['image']; ?>" alt="" class="">
+
+                    <?php if (empty($project['image-1'])): ?>
+                        <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image']; ?>" alt="" class="">
+
+                    <?php else: ?>
+
+                        <div class="popularItem__content-slider">
+                            <div class="popularItem__content-slider-buttons">
+                                <button class="popularItem__content-slider-buttons-prev">
+                                    <img src="/app/templates/img/left.svg" alt="" />
+                                </button>
+                                <button class="popularItem__content-slider-buttons-next">
+                                    <img src="/app/templates/img/right.svg" alt="" />
+                                </button>
+                            </div>
+                            <div class="popularItem__content-slider-track">
+                                <div class="popularItem__content-slider-track-item">
+                                    <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image']; ?>" alt="" class="minimized">
+                                </div>
+                                <div class="popularItem__content-slider-track-item">
+                                    <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image-1']; ?>" alt="" class="minimized">
+                                </div>
+
+                                <?php if (!empty($project['image-2'])): ?>
+                                    <div class="popularItem__content-slider-track-item">
+                                        <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image-2']; ?>" alt="" class="minimized">
+                                    </div>
+                                <?php endif; ?>
+
+                                <?php if (!empty($project['image-3'])): ?>
+                                    <div class="popularItem__content-slider-track-item">
+                                        <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image-3']; ?>" alt="" class="minimized">
+                                    </div>
+                                <?php endif; ?>
+
+                            </div>
+                        </div>
+                    <?php endif; ?>
+
                 </div>
                 <div class="product__content-text">
                     <h2>Описание</h2>
@@ -133,7 +255,45 @@ include ROOT . '/app/views/layouts/headerW.php'; ?>
         <section class="product">
             <div class="product__content">
                 <div class="product__content-image">
-                    <img src="/app/templates/img/<?php echo $categoryUrl . '/' . $project['image']; ?>" alt="" class="">
+
+                    <?php if (empty($project['image-1'])): ?>
+                        <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image']; ?>" alt="" class="">
+
+                    <?php else: ?>
+
+                        <div class="popularItem__content-slider">
+                            <div class="popularItem__content-slider-buttons">
+                                <button class="popularItem__content-slider-buttons-prev">
+                                    <img src="/app/templates/img/left.svg" alt="" />
+                                </button>
+                                <button class="popularItem__content-slider-buttons-next">
+                                    <img src="/app/templates/img/right.svg" alt="" />
+                                </button>
+                            </div>
+                            <div class="popularItem__content-slider-track">
+                                <div class="popularItem__content-slider-track-item">
+                                    <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image']; ?>" alt="" class="minimized">
+                                </div>
+                                <div class="popularItem__content-slider-track-item">
+                                    <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image-1']; ?>" alt="" class="minimized">
+                                </div>
+
+                                <?php if (!empty($project['image-2'])): ?>
+                                    <div class="popularItem__content-slider-track-item">
+                                        <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image-2']; ?>" alt="" class="minimized">
+                                    </div>
+                                <?php endif; ?>
+
+                                <?php if (!empty($project['image-3'])): ?>
+                                    <div class="popularItem__content-slider-track-item">
+                                        <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image-3']; ?>" alt="" class="minimized">
+                                    </div>
+                                <?php endif; ?>
+
+                            </div>
+                        </div>
+                    <?php endif; ?>
+
                 </div>
                 <div class="product__content-text">
                     <h2>Описание</h2>
@@ -154,7 +314,45 @@ include ROOT . '/app/views/layouts/headerW.php'; ?>
         <section class="product">
             <div class="product__content">
                 <div class="product__content-image">
-                    <img src="/app/templates/img/<?php echo $categoryUrl . '/' . $project['image']; ?>" alt="" class="">
+
+                    <?php if (empty($project['image-1'])): ?>
+                        <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image']; ?>" alt="" class="">
+
+                    <?php else: ?>
+
+                        <div class="popularItem__content-slider">
+                            <div class="popularItem__content-slider-buttons">
+                                <button class="popularItem__content-slider-buttons-prev">
+                                    <img src="/app/templates/img/left.svg" alt="" />
+                                </button>
+                                <button class="popularItem__content-slider-buttons-next">
+                                    <img src="/app/templates/img/right.svg" alt="" />
+                                </button>
+                            </div>
+                            <div class="popularItem__content-slider-track">
+                                <div class="popularItem__content-slider-track-item">
+                                    <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image']; ?>" alt="" class="minimized">
+                                </div>
+                                <div class="popularItem__content-slider-track-item">
+                                    <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image-1']; ?>" alt="" class="minimized">
+                                </div>
+
+                                <?php if (!empty($project['image-2'])): ?>
+                                    <div class="popularItem__content-slider-track-item">
+                                        <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image-2']; ?>" alt="" class="minimized">
+                                    </div>
+                                <?php endif; ?>
+
+                                <?php if (!empty($project['image-3'])): ?>
+                                    <div class="popularItem__content-slider-track-item">
+                                        <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image-3']; ?>" alt="" class="minimized">
+                                    </div>
+                                <?php endif; ?>
+
+                            </div>
+                        </div>
+                    <?php endif; ?>
+
                 </div>
                 <div class="product__content-text">
                     <h2>Описание</h2>
@@ -175,7 +373,45 @@ include ROOT . '/app/views/layouts/headerW.php'; ?>
         <section class="product">
             <div class="product__content">
                 <div class="product__content-image">
-                    <img src="/app/templates/img/<?php echo $categoryUrl . '/' . $project['image']; ?>" alt="" class="">
+
+                    <?php if (empty($project['image-1'])): ?>
+                        <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image']; ?>" alt="" class="">
+
+                    <?php else: ?>
+
+                        <div class="popularItem__content-slider">
+                            <div class="popularItem__content-slider-buttons">
+                                <button class="popularItem__content-slider-buttons-prev">
+                                    <img src="/app/templates/img/left.svg" alt="" />
+                                </button>
+                                <button class="popularItem__content-slider-buttons-next">
+                                    <img src="/app/templates/img/right.svg" alt="" />
+                                </button>
+                            </div>
+                            <div class="popularItem__content-slider-track">
+                                <div class="popularItem__content-slider-track-item">
+                                    <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image']; ?>" alt="" class="minimized">
+                                </div>
+                                <div class="popularItem__content-slider-track-item">
+                                    <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image-1']; ?>" alt="" class="minimized">
+                                </div>
+
+                                <?php if (!empty($project['image-2'])): ?>
+                                    <div class="popularItem__content-slider-track-item">
+                                        <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image-2']; ?>" alt="" class="minimized">
+                                    </div>
+                                <?php endif; ?>
+
+                                <?php if (!empty($project['image-3'])): ?>
+                                    <div class="popularItem__content-slider-track-item">
+                                        <img src="/app/templates/img/<?= $categoryUrl . '/' . $project['image-3']; ?>" alt="" class="minimized">
+                                    </div>
+                                <?php endif; ?>
+
+                            </div>
+                        </div>
+                    <?php endif; ?>
+
                 </div>
                 <div class="product__content-text">
                     <h2>Описание</h2>

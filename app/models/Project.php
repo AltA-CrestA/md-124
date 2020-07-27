@@ -26,6 +26,9 @@ class Project
         while ($row = $result->fetch()) {
             $projects[$i]['id'] = $row['id'];
             $projects[$i]['image'] = $row['image'];
+            $projects[$i]['image-1'] = $row['image-1'];
+            $projects[$i]['image-2'] = $row['image-2'];
+            $projects[$i]['image-3'] = $row['image-3'];
             $projects[$i]['core'] = $row['core'];
             $projects[$i]['facade'] = $row['facade'];
             $projects[$i]['furniture'] = $row['furniture'];
@@ -55,6 +58,8 @@ class Project
         while ($row = $result->fetch()) {
             $projects[$i]['id'] = $row['id'];
             $projects[$i]['image'] = $row['image'];
+            $projects[$i]['image-1'] = $row['image-1'];
+            $projects[$i]['image-2'] = $row['image-2'];
             $projects[$i]['core'] = $row['core'];
             $projects[$i]['facade'] = $row['facade'];
             $projects[$i]['furniture'] = $row['furniture'];
@@ -81,6 +86,7 @@ class Project
         while ($row = $result->fetch()) {
             $projects[$i]['id'] = $row['id'];
             $projects[$i]['image'] = $row['image'];
+            $projects[$i]['image-1'] = $row['image-1'];
             $projects[$i]['core'] = $row['core'];
             $projects[$i]['facade'] = $row['facade'];
             $projects[$i]['furniture'] = $row['furniture'];
@@ -183,12 +189,12 @@ class Project
     public static function sendMail($result)
     {
 
-        $mail_to = "develop@webskill24.ru";
+        $mail_to = "md_124@mail.ru";
         $subject = "Заполнена контактная форма на сайте";
 
         $headers = "MIME-Version: 1.0\r\n";
         $headers .= "Content-type: text/html; charset=utf-8\r\n";
-        $headers .= "From: Письмо с сайта <sale@irmedical.ru>\r\n";
+        $headers .= "From: Письмо с сайта <noreply@md-124.ru>\r\n";
 
         mail($mail_to, $subject, $result, $headers);
 
