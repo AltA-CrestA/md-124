@@ -17,7 +17,37 @@ include ROOT . '/app/views/layouts/headerW.php'; ?>
         <section class="product">
             <div class="product__content">
                 <div class="product__content-image">
-                    <img src="/app/templates/img/<?php echo $categoryUrl . '/' . $project['image']; ?>" alt="" class="">
+
+                    <div class="popularItem__content-slider">
+                    <div class="popularItem__content-slider-buttons">
+                        <button class="popularItem__content-slider-buttons-prev">
+                            <img src="../../img/left.svg" alt="" />
+                        </button>
+                        <button class="popularItem__content-slider-buttons-next">
+                            <img src="../../img/right.svg" alt="" />
+                        </button>
+			        </div>
+                    <div class="popularItem__content-slider-track">
+                        <div class="popularItem__content-slider-track-item">
+                                <img src="../../img/download/kitchen/1.jpg" alt="" class="minimized">
+                        </div>
+                        <div class="popularItem__content-slider-track-item">
+                                <img src="../../img/download/kitchen/1.jpg" alt="" class="minimized">
+                        </div>
+                        <div class="popularItem__content-slider-track-item">
+                                <img src="../../img/download/kitchen/1.jpg" alt="" class="minimized">
+                        </div>
+                        <div class="popularItem__content-slider-track-item">
+                                <img src="../../img/download/kitchen/1.jpg" alt="" class="minimized">
+                        </div>
+                        <div class="popularItem__content-slider-track-item">
+                                <img src="../../img/download/kitchen/1.jpg" alt="" class="minimized">
+                        </div>
+                        <div class="popularItem__content-slider-track-item">
+                                <img src="../../img/download/kitchen/1.jpg" alt="" class="minimized">
+                        </div>
+                    </div>
+                    </div>
                 </div>
                 <div class="product__content-text">
                     <h2>Описание</h2>

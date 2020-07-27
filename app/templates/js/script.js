@@ -70,7 +70,6 @@ $(window).scroll(function () {
 	scrollPrev = scrolled;
 });;
 //  Слайдер
-//  Слайдер
 $(document).ready(function () {
 	$('.slider').slick({
 		arrows: true,
@@ -108,7 +107,7 @@ $(document).ready(function () {
 		],
 	});
 });
-
+;
 const popupLinks = document.querySelectorAll('.popup-link');
 const lockPadding = document.querySelectorAll('.lock-padding');
 
@@ -233,6 +232,54 @@ document.addEventListener('keydown', (e) => {
 	}
 })();
 ;
+let position = 0;
+
+let slidsToShow = 1;
+
+const slidsToScroll = 1;
+
+const container = document.querySelector('.popularItem__content-slider');
+const track = document.querySelector('.popularItem__content-slider-track');
+const btnPrev = document.querySelector('.popularItem__content-slider-buttons-prev');
+const btnNext = document.querySelector('.popularItem__content-slider-buttons-next');
+const items = document.querySelectorAll('.popularItem__content-slider-track-item');
+const itemsCount = items.length;
+const itemWidth = container.clientWidth / slidsToShow;
+const movePosition = slidsToScroll * itemWidth;
+
+items.forEach((item) => {
+	item.style.minWidth = `${itemWidth}px`;
+});
+
+btnNext.addEventListener('click', () => {
+	const itemsLeft = itemsCount - (Math.abs(position) + slidsToShow * itemWidth) / itemWidth;
+
+	position -= itemsLeft >= slidsToScroll ? movePosition : itemsLeft * itemWidth;
+
+	setPositon();
+	ckeckBtns();
+});
+
+btnPrev.addEventListener('click', () => {
+	const itemsLeft = Math.abs(position) / itemWidth;
+
+	position += itemsLeft >= slidsToScroll ? movePosition : itemsLeft * itemWidth;
+
+	setPositon();
+	ckeckBtns();
+});
+
+const setPositon = () => {
+	track.style.transform = `translateX(${position}px)`;
+};
+
+const ckeckBtns = () => {
+	btnPrev.disabled = position === 0;
+	btnNext.disabled = position <= -(itemsCount - slidsToShow) * itemWidth;
+};
+
+ckeckBtns();
+;
 $(function () {
 	$('.minimized').click(function (event) {
 		var i_path = $(this).attr('src');
@@ -265,7 +312,6 @@ $(document).ready(function () {
 		// собираем данные с формы
 		var name = $('#name-contact').val();
 		var phone = $('#phone-contact').val();
-		var email = $('#email-contact').val();
 		var message = $('#message-contact').val();
 		// отправляем данные
 		$.ajax({
@@ -276,29 +322,24 @@ $(document).ready(function () {
 				// что отправляем
 				'name-contact': name,
 				'phone-contact': phone,
-				'email-contact': email,
 				'message-contact': message,
 			},
 			// после получения ответа сервера
 			success: function (data) {
 				if (jQuery.isEmptyObject(data['failure'])) {
+					$('.formSection__content').css({ display: 'none' });
 					$('.result-contact').css({
-						background: '#fff',
-						color: '#017605',
+						background: '#017605',
+						color: '#fff',
 						padding: '10px',
 						fontSize: '18px',
 						textAlign: 'center',
-						borderRadius: '10px',
-						border: '2px solid #017605',
-						margin: '20px 0px 0px',
 					});
 					$('.result-contact').html(data.success); // выводим ответ сервера
 				} else {
 					$('.result-contact').css({
-						borderRadius: '10px',
-						color: '#fff',
-						background: '#F0282A',
-						margin: '20px 0px 0px',
+						border: '2px solid #000',
+						color: 'red',
 						padding: '10px',
 						fontSize: '16px',
 					});
@@ -316,37 +357,35 @@ $(document).ready(function () {
 		// собираем данные с формы
 		var name = $('#name-popup').val();
 		var phone = $('#phone-popup').val();
+		var message = $('#message-popup').val();
 		// отправляем данные
 		$.ajax({
-			url: '/ajax', // куда отправляем
+			url: '/action-popup.php', // куда отправляем
 			type: 'post', // метод передачи
 			dataType: 'json', // тип передачи данных
 			data: {
 				// что отправляем
 				'name-popup': name,
 				'phone-popup': phone,
+				'message-popup': message,
 			},
 			// после получения ответа сервера
 			success: function (data) {
 				if (jQuery.isEmptyObject(data['failure'])) {
 					$('.popup__item').css({ display: 'none' });
 					$('.result-popup').css({
-						background: '#fff',
-						color: '#017605',
+						background: '#017605',
+						color: '#fff',
 						padding: '10px',
 						fontSize: '18px',
 						textAlign: 'center',
-						borderRadius: '10px',
-						border: '2px solid #017605',
-						margin: '10px 30px',
 					});
 					$('.result-popup').html(data.success); // выводим ответ сервера
+					$('.popup').delay(2250).fadeOut('slow');
 				} else {
 					$('.result-popup').css({
-						borderRadius: '10px',
-						color: '#fff',
-						background: '#F0282A',
-						margin: '0 30px',
+						border: '2px solid #000',
+						color: 'red',
 						padding: '10px',
 						fontSize: '16px',
 					});
@@ -356,6 +395,33 @@ $(document).ready(function () {
 		});
 	});
 });
+
+var pos = { lat: 56.012458, lng: 92.873602 };
+var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+function initMap() {
+	var map = new google.maps.Map(document.getElementById('map'), {
+		center: pos,
+		zoom: 16,
+		// icon: iconBase + 'parking_lot_maps.png',
+	});
+
+	var info = new google.maps.InfoWindow({
+		content: '<h7>Ресторан Кинза</h7>',
+	});
+	var marker = new google.maps.Marker({
+		position: { lat: 56.012158, lng: 92.873602 },
+		map: map,
+		title: 'Мебель Дизайн',
+		// icon: {
+		// 	url: '/img/logo.png',
+		// 	scaledSize: new google.maps.Size(64, 64),
+		// },
+	});
+
+	marker.addListener('click', () => {
+		info.open(map, marker);
+	});
+}
 
 // Кнопка Cоц сетей
 
