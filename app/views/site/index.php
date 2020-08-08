@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="/app/templates/plugins/animate/animate.min.css">
     <link rel="stylesheet" href="/app/templates/css/style.css">
+    <link rel="shortcut icon" href="/app/templates/img/icon.png" type="image/png">
+    <link rel="icon" href="/app/templates/img/icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/app/templates/img/icon.png" type="image/png"/>
     <title>Главная &mdash; Мастерская Дизайна</title>
 </head>
 <body>
